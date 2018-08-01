@@ -10,7 +10,11 @@ import AppKit
 import NXKit
 
 class NXView: NSView {
-    
+    //
+    @IBInspectable var cornerRadius: CGFloat = 0
+    @IBInspectable var borderWidth: CGFloat = 0
+    @IBInspectable var borderColor: NSColor = NSColor.clear
+    //
     @IBInspectable public var backgroundColor: NSColor = NSColor.clear
     
     public var controlRecords: [NXViewControlRecord] = []

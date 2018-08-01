@@ -6,14 +6,102 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Text View Controller-->
         <scene sceneID="f9A-1K-kYc">
             <objects>
-                <viewController id="IFU-Jg-Bgb" sceneMemberID="viewController">
+                <viewController id="IFU-Jg-Bgb" customClass="TextViewController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="hRA-oo-67h">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QvY-0Q-5rd">
+                                <rect key="frame" x="20" y="258" width="141" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="PfW-JK-wRe">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-Jm-QmO">
+                                <rect key="frame" x="14" y="200" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d9k-mK-g2V">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC1-Wn-Tro" customClass="NXScrollView" customModule="SimpleMacWidgets" customModuleProvider="target">
+                                <rect key="frame" x="180" y="180" width="250" height="100"/>
+                                <clipView key="contentView" drawsBackground="NO" id="UAI-MU-e2t">
+                                    <rect key="frame" x="1" y="1" width="233" height="98"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="yxA-WN-CGY" customClass="NXTextView" customModule="NXKit">
+                                            <rect key="frame" x="0.0" y="16" width="233" height="114"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="233" height="98"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment content="- Make text at the bottom of the note in extension cutoff at the hover line. Currently cuts above it">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mCq-6j-r5x"/>
+                                    <constraint firstAttribute="width" constant="250" id="x3p-yY-tq8"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="C1N-Q2-g1s">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hG4-AS-QJv">
+                                    <rect key="frame" x="234" y="1" width="15" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="wantLayer" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Px7-fz-37n">
+                                <rect key="frame" x="178" y="143" width="227" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This is pushed according to textView" id="LZJ-pq-4aZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Px7-fz-37n" firstAttribute="top" secondItem="HC1-Wn-Tro" secondAttribute="bottom" constant="20" id="8wp-TS-Pol"/>
+                            <constraint firstItem="HC1-Wn-Tro" firstAttribute="top" secondItem="hRA-oo-67h" secondAttribute="top" constant="20" id="9fc-ZB-uxM"/>
+                            <constraint firstAttribute="trailing" secondItem="HC1-Wn-Tro" secondAttribute="trailing" constant="20" id="Raq-47-moX"/>
+                            <constraint firstItem="Px7-fz-37n" firstAttribute="leading" secondItem="HC1-Wn-Tro" secondAttribute="leading" id="bOt-WM-EX7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView1" destination="yxA-WN-CGY" id="FjY-Vu-eDL"/>
+                        <outlet property="textfield1" destination="QvY-0Q-5rd" id="Fxi-HW-Fb1"/>
+                    </connections>
                 </viewController>
                 <customObject id="M9G-ka-hWT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

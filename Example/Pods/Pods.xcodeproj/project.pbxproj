@@ -20,6 +20,8 @@
 		C49566832111EDE000EF10EE /* Hoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FEC452111ED8200217063 /* Hoverable.swift */; };
 		C49566842111EDE500EF10EE /* BorderStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FEC442111ED8200217063 /* BorderStylable.swift */; };
 		C49566852111EDE700EF10EE /* BackgroundStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FEC462111ED8200217063 /* BackgroundStylable.swift */; };
+		C495668A2111F22B00EF10EE /* NXTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49566892111F22B00EF10EE /* NXTextFormatter.swift */; };
+		C495668E2111F5DC00EF10EE /* NXTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495668D2111F5DC00EF10EE /* NXTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +65,12 @@
 		BD968A953F8F0C50A27436C81EBD6776 /* Pods-NXKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NXKit_Example-dummy.m"; sourceTree = "<group>"; };
 		C3A828272226651C583B454F857385C8 /* Pods_NXKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NXKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40C1D38C6CED2252C1F41FCD5C5988D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C43FEC442111ED8200217063 /* BorderStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorderStylable.swift; path = NXKit/Classes/BorderStylable.swift; sourceTree = "<group>"; };
-		C43FEC452111ED8200217063 /* Hoverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Hoverable.swift; path = NXKit/Classes/Hoverable.swift; sourceTree = "<group>"; };
-		C43FEC462111ED8200217063 /* BackgroundStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundStylable.swift; path = NXKit/Classes/BackgroundStylable.swift; sourceTree = "<group>"; };
-		C49566812111EDB000EF10EE /* TargetActionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetActionable.swift; path = NXKit/Classes/TargetActionable.swift; sourceTree = "<group>"; };
+		C43FEC442111ED8200217063 /* BorderStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderStylable.swift; sourceTree = "<group>"; };
+		C43FEC452111ED8200217063 /* Hoverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hoverable.swift; sourceTree = "<group>"; };
+		C43FEC462111ED8200217063 /* BackgroundStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStylable.swift; sourceTree = "<group>"; };
+		C49566812111EDB000EF10EE /* TargetActionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetActionable.swift; sourceTree = "<group>"; };
+		C49566892111F22B00EF10EE /* NXTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXTextFormatter.swift; sourceTree = "<group>"; };
+		C495668D2111F5DC00EF10EE /* NXTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXTextView.swift; sourceTree = "<group>"; };
 		D0352E146F9B2BDF58E1CDCB6BEF6FC5 /* Pods-NXKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NXKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D25DF7CD21C6796FAA638CDCE50F7FFE /* Pods-NXKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D87DD40DCC160C50CB67E2534E4ED584 /* Pods_NXKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NXKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,10 +125,8 @@
 		2605EE0E19487963C0953712BA7E3C14 /* NXKit */ = {
 			isa = PBXGroup;
 			children = (
-				C49566812111EDB000EF10EE /* TargetActionable.swift */,
-				C43FEC462111ED8200217063 /* BackgroundStylable.swift */,
-				C43FEC442111ED8200217063 /* BorderStylable.swift */,
-				C43FEC452111ED8200217063 /* Hoverable.swift */,
+				C49566872111F1F600EF10EE /* Protocols */,
+				C49566882111F21000EF10EE /* Views */,
 				9C2ED378E53B9830B8CDABCDBF3F7AC8 /* Pod */,
 				610702E75085DB55D6D6FC9214EE1FC3 /* Support Files */,
 			);
@@ -200,6 +202,26 @@
 				85656E6F1334B5A3F11480214DC16797 /* Pods-NXKit_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C49566872111F1F600EF10EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C43FEC452111ED8200217063 /* Hoverable.swift */,
+				C49566812111EDB000EF10EE /* TargetActionable.swift */,
+				C43FEC462111ED8200217063 /* BackgroundStylable.swift */,
+				C43FEC442111ED8200217063 /* BorderStylable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C49566882111F21000EF10EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C49566892111F22B00EF10EE /* NXTextFormatter.swift */,
+				C495668D2111F5DC00EF10EE /* NXTextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E56E3F75B4891FA4C172799C2C7F33D7 /* Development Pods */ = {
@@ -377,6 +399,8 @@
 				C49566842111EDE500EF10EE /* BorderStylable.swift in Sources */,
 				C49566852111EDE700EF10EE /* BackgroundStylable.swift in Sources */,
 				C49566832111EDE000EF10EE /* Hoverable.swift in Sources */,
+				C495668E2111F5DC00EF10EE /* NXTextView.swift in Sources */,
+				C495668A2111F22B00EF10EE /* NXTextFormatter.swift in Sources */,
 				2B714282C302B57EC8336BE9282304DF /* NXKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
