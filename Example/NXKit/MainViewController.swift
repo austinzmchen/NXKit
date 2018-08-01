@@ -91,6 +91,8 @@ extension MainViewController: NSTableViewDelegate {
             performSegue(withIdentifier: "showSimpleViewsVC", sender: nil)
         } else if row == 1 {
             performSegue(withIdentifier: "showTextViewVC", sender: nil)
+        } else if row == 2 {
+            performSegue(withIdentifier: "showStackViewVC", sender: nil)
         }
     }
 }

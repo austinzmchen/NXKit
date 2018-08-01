@@ -818,6 +818,7 @@
                         <outlet property="tableView" destination="sfS-Sf-XzI" id="qoV-Kh-pHL"/>
                         <segue destination="ZME-p0-ZGg" kind="show" identifier="showTextViewVC" id="pKL-2q-RD2"/>
                         <segue destination="Nh1-Wj-ZNG" kind="show" identifier="showSimpleViewsVC" id="eyZ-cX-Uab"/>
+                        <segue destination="NSh-nC-qBE" kind="show" identifier="showStackViewVC" id="bYw-bL-A8T"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -839,6 +840,14 @@
                 <customObject id="8Cu-1Q-7Qs" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="543" y="655"/>
+        </scene>
+        <!--StackView-->
+        <scene sceneID="FV2-fM-irr">
+            <objects>
+                <controllerPlaceholder storyboardName="StackView" id="NSh-nC-qBE" sceneMemberID="viewController"/>
+                <customObject id="R5L-Qv-cGo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="547" y="757"/>
         </scene>
     </scenes>
 </document>

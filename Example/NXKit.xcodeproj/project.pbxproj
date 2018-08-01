@@ -15,8 +15,10 @@
 		C45EF9D82111528900810941 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9D72111528900810941 /* NSView.swift */; };
 		C45EF9DB211158C600810941 /* NXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9DA211158C600810941 /* NXView.swift */; };
 		C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495668B2111F3BB00EF10EE /* TextViewController.swift */; };
+		C49566902111FB2400EF10EE /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C495668F2111FB2400EF10EE /* StackView.storyboard */; };
+		C49566922111FB3200EF10EE /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49566912111FB3200EF10EE /* StackViewController.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
-		ED83F67E20348A760038D96B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* ViewController.swift */; };
+		ED83F67E20348A760038D96B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* MainViewController.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
 		ED83F68320348A760038D96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED83F68120348A760038D96B /* Main.storyboard */; };
 		ED83F68F20348A760038D96B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* Tests.swift */; };
@@ -46,10 +48,12 @@
 		C45EF9D72111528900810941 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 		C45EF9DA211158C600810941 /* NXView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXView.swift; sourceTree = "<group>"; };
 		C495668B2111F3BB00EF10EE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		C495668F2111FB2400EF10EE /* StackView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
+		C49566912111FB3200EF10EE /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		DC08661968B94C9FD3303E1E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ED83F67820348A760038D96B /* NXKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NXKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F67B20348A760038D96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED83F67D20348A760038D96B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED83F67D20348A760038D96B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED83F67F20348A760038D96B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED83F68220348A760038D96B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED83F68420348A760038D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		C45EF9CA2111295F00810941 /* StackView */ = {
 			isa = PBXGroup;
 			children = (
+				C49566912111FB3200EF10EE /* StackViewController.swift */,
+				C495668F2111FB2400EF10EE /* StackView.storyboard */,
 			);
 			path = StackView;
 			sourceTree = "<group>";
@@ -159,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				ED83F67B20348A760038D96B /* AppDelegate.swift */,
-				ED83F67D20348A760038D96B /* ViewController.swift */,
+				ED83F67D20348A760038D96B /* MainViewController.swift */,
 				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				ED83F68120348A760038D96B /* Main.storyboard */,
 				C45EF9D2211150DF00810941 /* SimpleViews */,
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED83F68020348A760038D96B /* Assets.xcassets in Resources */,
+				C49566902111FB2400EF10EE /* StackView.storyboard in Resources */,
 				C45EF9D62111512D00810941 /* SimpleViews.storyboard in Resources */,
 				ED83F68320348A760038D96B /* Main.storyboard in Resources */,
 				C45EF9D1211129A300810941 /* TextView.storyboard in Resources */,
@@ -357,8 +364,9 @@
 			files = (
 				C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */,
 				C45EF9DB211158C600810941 /* NXView.swift in Sources */,
-				ED83F67E20348A760038D96B /* ViewController.swift in Sources */,
+				ED83F67E20348A760038D96B /* MainViewController.swift in Sources */,
 				C45EF9D82111528900810941 /* NSView.swift in Sources */,
+				C49566922111FB3200EF10EE /* StackViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
 				C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */,
 			);
