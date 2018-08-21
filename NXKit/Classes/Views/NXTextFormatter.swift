@@ -47,7 +47,7 @@ public class NXTextFormatter: Formatter {
         return true
     }
     
-    public override func attributedString(for obj: Any, withDefaultAttributes attrs: [NSAttributedStringKey : Any]? = nil) -> NSAttributedString? {
+    public override func attributedString(for obj: Any, withDefaultAttributes attrs: [NSAttributedString.Key : Any]? = nil) -> NSAttributedString? {
         return nil
     }
 }

@@ -1,11 +1,12 @@
 use_frameworks!
 
 target 'NXKit_Example' do
-  pod 'NXKit', :path => '../'
+    platform :osx, '10.11'
+    
+    pod 'NXKit', :path => '../'
 
-  target 'NXKit_Tests' do
+    target 'NXKit_Tests' do
     inherit! :search_paths
 
-    
-  end
+    end
 end

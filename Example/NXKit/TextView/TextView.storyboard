@@ -31,18 +31,18 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC1-Wn-Tro" customClass="NXScrollView" customModule="SimpleMacWidgets" customModuleProvider="target">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC1-Wn-Tro" customClass="NXScrollView" customModule="NXKit_Example" customModuleProvider="target">
                                 <rect key="frame" x="180" y="180" width="250" height="100"/>
                                 <clipView key="contentView" drawsBackground="NO" id="UAI-MU-e2t">
-                                    <rect key="frame" x="1" y="1" width="233" height="98"/>
+                                    <rect key="frame" x="1" y="1" width="248" height="98"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="yxA-WN-CGY" customClass="NXTextView" customModule="NXKit">
-                                            <rect key="frame" x="0.0" y="16" width="233" height="114"/>
+                                            <rect key="frame" x="0.0" y="16" width="248" height="114"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="233" height="98"/>
+                                            <size key="minSize" width="248" height="98"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="- Make text at the bottom of the note in extension cutoff at the hover line. Currently cuts above it">
@@ -66,7 +66,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hG4-AS-QJv">
-                                    <rect key="frame" x="234" y="1" width="15" height="98"/>
+                                    <rect key="frame" x="233" y="1" width="16" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <userDefinedRuntimeAttributes>
