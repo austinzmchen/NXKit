@@ -43,7 +43,18 @@
                                     <action selector="buttonTapped:" target="nDB-tg-Jzp" id="buY-5R-MmZ"/>
                                 </connections>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="v34-hL-5HZ" customClass="TooltipView" customModule="NXKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="251" y="182" width="163" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="C1w-Qc-OYC"/>
+                                    <constraint firstAttribute="height" constant="46" id="pfI-Pr-hzJ"/>
+                                </constraints>
+                            </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="v34-hL-5HZ" firstAttribute="top" secondItem="caC-td-0Sx" secondAttribute="top" constant="72" id="Mpg-0N-87R"/>
+                            <constraint firstAttribute="trailing" secondItem="v34-hL-5HZ" secondAttribute="trailing" constant="36" id="rLc-HF-ndh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="Sc2-GF-fB2" id="vHy-Zh-DeL"/>

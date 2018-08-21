@@ -23,42 +23,42 @@ private extension SnapOption {
     }
 }
 
-extension NSView {
+public extension NSView {
     
-    func snapTopBottom(toView view: NSView, option: SnapOption = .uniformInset(0)) {
+    public func snapTopBottom(toView view: NSView, option: SnapOption = .uniformInset(0)) {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: view.topAnchor, constant: option.resultInsets.top),
             bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -option.resultInsets.bottom)
             ])
     }
     
-    func snapLeadTrail(toView view: NSView, option: SnapOption = .uniformInset(0)) {
+    public func snapLeadTrail(toView view: NSView, option: SnapOption = .uniformInset(0)) {
         NSLayoutConstraint.activate([
             leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: option.resultInsets.left),
             trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -option.resultInsets.right)
             ])
     }
     
-    func snapAll(toView view: NSView, option: SnapOption = .uniformInset(0)) {
+    public func snapAll(toView view: NSView, option: SnapOption = .uniformInset(0)) {
         snapTopBottom(toView: view, option: option)
         snapLeadTrail(toView: view, option: option)
     }
     
-    func snapTopBottomToSuperview() {
+    public func snapTopBottomToSuperview() {
         guard let sv = self.superview
             else { return }
         
         snapTopBottom(toView: sv)
     }
     
-    func snapLeadTrailToSuperview() {
+    public func snapLeadTrailToSuperview() {
         guard let sv = self.superview
             else { return }
         
         snapLeadTrail(toView: sv)
     }
     
-    func snapAllToSuperview() {
+    public func snapAllToSuperview() {
         snapTopBottomToSuperview()
         snapLeadTrailToSuperview()
     }

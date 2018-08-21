@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		55B95137F6EC7173EEF3AF2A /* Pods_NXKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA0BA672D6D0E823F714EEC /* Pods_NXKit_Example.framework */; };
 		7CF4205DD507AA09509287B7 /* Pods_NXKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCC622ADC53597B1AB8DFCB /* Pods_NXKit_Tests.framework */; };
+		C4120782212C7366006D350E /* TooltipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4120781212C7366006D350E /* TooltipView.swift */; };
+		C4120784212C7383006D350E /* TooltipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4120783212C7383006D350E /* TooltipView.xib */; };
 		C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FEC422111EB0C00217063 /* SimpleViewsViewController.swift */; };
 		C45EF9D1211129A300810941 /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45EF9D0211129A300810941 /* TextView.storyboard */; };
 		C45EF9D62111512D00810941 /* SimpleViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45EF9D52111512D00810941 /* SimpleViews.storyboard */; };
-		C45EF9D82111528900810941 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9D72111528900810941 /* NSView.swift */; };
+		C45EF9D82111528900810941 /* NSView_.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9D72111528900810941 /* NSView_.swift */; };
 		C45EF9DB211158C600810941 /* NXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9DA211158C600810941 /* NXView.swift */; };
 		C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495668B2111F3BB00EF10EE /* TextViewController.swift */; };
 		C49566902111FB2400EF10EE /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C495668F2111FB2400EF10EE /* StackView.storyboard */; };
@@ -42,10 +44,12 @@
 		B5BC3C1ED5484D6E71F36585 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B6630DE7209A1241CDFEB68C /* Pods-NXKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NXKit_Tests/Pods-NXKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C0CC11E20DBEF920EB0F4975 /* Pods-NXKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NXKit_Example/Pods-NXKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C4120781212C7366006D350E /* TooltipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipView.swift; sourceTree = "<group>"; };
+		C4120783212C7383006D350E /* TooltipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TooltipView.xib; sourceTree = "<group>"; };
 		C43FEC422111EB0C00217063 /* SimpleViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewsViewController.swift; sourceTree = "<group>"; };
 		C45EF9D0211129A300810941 /* TextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextView.storyboard; sourceTree = "<group>"; };
 		C45EF9D52111512D00810941 /* SimpleViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleViews.storyboard; sourceTree = "<group>"; };
-		C45EF9D72111528900810941 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
+		C45EF9D72111528900810941 /* NSView_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView_.swift; sourceTree = "<group>"; };
 		C45EF9DA211158C600810941 /* NXView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXView.swift; sourceTree = "<group>"; };
 		C495668B2111F3BB00EF10EE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		C495668F2111FB2400EF10EE /* StackView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
@@ -134,8 +138,10 @@
 			children = (
 				C45EF9D52111512D00810941 /* SimpleViews.storyboard */,
 				C43FEC422111EB0C00217063 /* SimpleViewsViewController.swift */,
-				C45EF9D72111528900810941 /* NSView.swift */,
+				C45EF9D72111528900810941 /* NSView_.swift */,
 				C45EF9DA211158C600810941 /* NXView.swift */,
+				C4120781212C7366006D350E /* TooltipView.swift */,
+				C4120783212C7383006D350E /* TooltipView.xib */,
 			);
 			path = SimpleViews;
 			sourceTree = "<group>";
@@ -143,8 +149,8 @@
 		ED83F66F20348A760038D96B = {
 			isa = PBXGroup;
 			children = (
-				ED83F69A20348B650038D96B /* Podspec Metadata */,
 				ED83F67A20348A760038D96B /* NXKit */,
+				ED83F69A20348B650038D96B /* Podspec Metadata */,
 				ED83F68D20348A760038D96B /* Tests */,
 				ED83F67920348A760038D96B /* Products */,
 				14BD29D4E261ABBCE057F8C1 /* Pods */,
@@ -285,6 +291,7 @@
 			files = (
 				ED83F68020348A760038D96B /* Assets.xcassets in Resources */,
 				C49566902111FB2400EF10EE /* StackView.storyboard in Resources */,
+				C4120784212C7383006D350E /* TooltipView.xib in Resources */,
 				C45EF9D62111512D00810941 /* SimpleViews.storyboard in Resources */,
 				ED83F68320348A760038D96B /* Main.storyboard in Resources */,
 				C45EF9D1211129A300810941 /* TextView.storyboard in Resources */,
@@ -364,8 +371,9 @@
 			files = (
 				C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */,
 				C45EF9DB211158C600810941 /* NXView.swift in Sources */,
+				C4120782212C7366006D350E /* TooltipView.swift in Sources */,
 				ED83F67E20348A760038D96B /* MainViewController.swift in Sources */,
-				C45EF9D82111528900810941 /* NSView.swift in Sources */,
+				C45EF9D82111528900810941 /* NSView_.swift in Sources */,
 				C49566922111FB3200EF10EE /* StackViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
 				C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */,
@@ -520,7 +528,7 @@
 				DEVELOPMENT_TEAM = JF6RD64R9G;
 				INFOPLIST_FILE = NXKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ac.NXKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -540,7 +548,7 @@
 				DEVELOPMENT_TEAM = JF6RD64R9G;
 				INFOPLIST_FILE = NXKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ac.NXKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
