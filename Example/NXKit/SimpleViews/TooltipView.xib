@@ -9,26 +9,27 @@
         <customObject id="-2" userLabel="File's Owner" customClass="TooltipView" customModule="NXKit_Example" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="c22-O7-iKe" id="JqX-oV-WFY"/>
+                <outlet property="label" destination="Tr3-w6-xFG" id="TU1-xa-hE8"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="174" height="52"/>
+            <rect key="frame" x="0.0" y="0.0" width="174" height="35"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="dGf-iF-pib" customClass="NXTriangleView" customModule="NXKit">
-                    <rect key="frame" x="79" y="0.0" width="16" height="8"/>
+                    <rect key="frame" x="83" y="0.0" width="8" height="4"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="16" id="DuD-Py-wes"/>
-                        <constraint firstAttribute="height" constant="8" id="l2H-ek-EgY"/>
+                        <constraint firstAttribute="width" constant="8" id="DuD-Py-wes"/>
+                        <constraint firstAttribute="height" constant="4" id="l2H-ek-EgY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="shapeColor">
                             <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
-                            <size key="value" width="16" height="8"/>
+                            <size key="value" width="8" height="4"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
                             <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,7 +37,23 @@
                     </userDefinedRuntimeAttributes>
                 </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="Uza-Cu-dTd" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="8" width="174" height="44"/>
+                    <rect key="frame" x="0.0" y="3" width="174" height="32"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tr3-w6-xFG">
+                            <rect key="frame" x="6" y="8" width="162" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="toF-Z1-rP8">
+                                <font key="font" metaFont="system" size="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Tr3-w6-xFG" secondAttribute="trailing" constant="8" id="1Tu-O2-N0L"/>
+                        <constraint firstAttribute="bottom" secondItem="Tr3-w6-xFG" secondAttribute="bottom" constant="8" id="Ca4-wC-kR0"/>
+                        <constraint firstItem="Tr3-w6-xFG" firstAttribute="leading" secondItem="Uza-Cu-dTd" secondAttribute="leading" constant="8" id="NF9-W5-wRi"/>
+                        <constraint firstItem="Tr3-w6-xFG" firstAttribute="top" secondItem="Uza-Cu-dTd" secondAttribute="top" constant="8" id="hJM-RQ-Wjg"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                             <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,7 +66,7 @@
             </subviews>
             <constraints>
                 <constraint firstItem="Uza-Cu-dTd" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="9fv-G2-rky"/>
-                <constraint firstItem="dGf-iF-pib" firstAttribute="top" secondItem="Uza-Cu-dTd" secondAttribute="bottom" id="BGW-u8-VUe"/>
+                <constraint firstItem="dGf-iF-pib" firstAttribute="top" secondItem="Uza-Cu-dTd" secondAttribute="bottom" constant="-1" id="BGW-u8-VUe"/>
                 <constraint firstAttribute="bottom" secondItem="dGf-iF-pib" secondAttribute="bottom" id="JuR-cg-b4j"/>
                 <constraint firstItem="dGf-iF-pib" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="NiK-SB-CTd"/>
                 <constraint firstItem="Uza-Cu-dTd" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="uBD-fy-0er"/>

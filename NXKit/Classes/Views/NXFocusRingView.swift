@@ -15,13 +15,7 @@ public struct NXFocusInfo {
 public typealias NXFocusStatesInfo = (on: NXFocusInfo, off: NXFocusInfo)
 
 @IBDesignable
-public class NXFocusRingView: NSView, TargetActionable {
-    
-    @IBInspectable public var cornerRadius: CGFloat = 0
-    @IBInspectable public var borderWidth: CGFloat = 0
-    @IBInspectable public var borderColor: NSColor = NSColor.clear
-    
-    @IBInspectable public var backgroundColor: NSColor = NSColor.clear
+public class NXFocusRingView: NXView {
     
     //------------------------------------------------------------------------
     // MARK: focus setters
@@ -60,9 +54,6 @@ public class NXFocusRingView: NSView, TargetActionable {
         av.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: insets.right).isActive = true
     }
     
-    // misc
-    public var controlRecords: [NXViewControlRecord] = []
-    
     //------------------------------------------------------------------------
     // MARK: life cycle views
     
@@ -77,10 +68,6 @@ public class NXFocusRingView: NSView, TargetActionable {
     
     open override func updateLayer() {
         super.updateLayer()
-        wantsLayer = true
-        
-        updateBorderStyle()
-        updateBackgroundStyle()
         
         if isFocused {
             layer?.borderColor = focusStatesInfo.on.borderColor.cgColor
@@ -101,10 +88,6 @@ public class NXFocusRingView: NSView, TargetActionable {
         }
     }
 }
-
-extension NXFocusRingView: Hoverable {}
-extension NXFocusRingView: BorderStylable {}
-extension NXFocusRingView: BackgroundStylable {}
 
 // MARK: hover stuff
 public extension NXFocusRingView {

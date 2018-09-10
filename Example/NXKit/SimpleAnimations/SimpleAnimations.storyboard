@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="orD-bV-k5V">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Animations View Controller-->
+        <scene sceneID="PhA-QM-Def">
+            <objects>
+                <viewController id="orD-bV-k5V" customClass="SimpleAnimationsViewController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="9hM-36-tza">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1aa-dL-vdy" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="190" width="160" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="1GN-qq-p0L"/>
+                                    <constraint firstAttribute="width" constant="160" id="mFY-Wx-7d6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.56058603129999995" green="0.80861779519999999" blue="0.4416101623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vnr-TD-V2d">
+                                <rect key="frame" x="22" y="13" width="86" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lMY-O7-kTy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="button1Clicked:" target="orD-bV-k5V" id="P90-73-wy0"/>
+                                </connections>
+                            </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-1V-lJx" userLabel="View2" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="85" width="70" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="q7A-q9-NBg"/>
+                                    <constraint firstAttribute="width" constant="70" id="rTn-lW-tMp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31V-9y-Inn">
+                                <rect key="frame" x="120" y="13" width="89" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button2" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Eg-p4-kgC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="button2Clicked:" target="orD-bV-k5V" id="dRF-Kh-jIb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NhQ-1V-lJx" firstAttribute="top" secondItem="1aa-dL-vdy" secondAttribute="bottom" constant="15" id="8j0-28-s1f"/>
+                            <constraint firstItem="1aa-dL-vdy" firstAttribute="top" secondItem="9hM-36-tza" secondAttribute="top" constant="20" id="RJJ-VR-xK3"/>
+                            <constraint firstItem="NhQ-1V-lJx" firstAttribute="leading" secondItem="9hM-36-tza" secondAttribute="leading" constant="20" id="Xet-Fu-Rfv"/>
+                            <constraint firstItem="1aa-dL-vdy" firstAttribute="leading" secondItem="9hM-36-tza" secondAttribute="leading" constant="20" id="jol-UP-mSd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="view1" destination="1aa-dL-vdy" id="33I-Zk-AP5"/>
+                        <outlet property="view2" destination="NhQ-1V-lJx" id="W8g-Oh-0XO"/>
+                        <outlet property="view2LeadConstraint" destination="Xet-Fu-Rfv" id="82j-Hb-wFx"/>
+                    </connections>
+                </viewController>
+                <customObject id="OAg-n8-6tz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-493" y="-188"/>
+        </scene>
+    </scenes>
+</document>

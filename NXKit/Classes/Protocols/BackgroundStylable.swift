@@ -9,13 +9,21 @@
 import AppKit
 
 public protocol BackgroundStylable {
-    var backgroundColor: NSColor {get set}
+    var backgroundColor: NSColor? {get set}
     
     func updateBackgroundStyle()
 }
 
 extension BackgroundStylable where Self : NSView {
+    
     public func updateBackgroundStyle() {
-        layer?.backgroundColor = backgroundColor.cgColor
+        guard wantsUpdateLayer else {
+            print("Warning: BackgroundColor needs wantsUpdateLayer == true"); return }
+        
+        wantsLayer = true
+        
+        if let bgc = backgroundColor {
+            layer?.backgroundColor = bgc.cgColor
+        }
     }
 }

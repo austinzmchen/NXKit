@@ -31,23 +31,3 @@ public extension NSView {
         subviews = []
     }
 }
-
-extension NSView: Focusable {
-    @objc public var isFocused: Bool {
-        get {
-            if let wd = window,
-                wd.fieldEditor(false, for: self) == wd.firstResponder {
-                return true
-            }
-            return false
-        }
-
-        set {
-            window?.makeFirstResponder(self)
-        }
-    }
-}
-
-protocol Focusable {
-    var isFocused: Bool {get set}
-}

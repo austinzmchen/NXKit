@@ -19,6 +19,15 @@
 		C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495668B2111F3BB00EF10EE /* TextViewController.swift */; };
 		C49566902111FB2400EF10EE /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C495668F2111FB2400EF10EE /* StackView.storyboard */; };
 		C49566922111FB3200EF10EE /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49566912111FB3200EF10EE /* StackViewController.swift */; };
+		C4ADDDEA2136042C00714179 /* SimpleAnimations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ADDDE92136042C00714179 /* SimpleAnimations.storyboard */; };
+		C4ADDDEC213604A200714179 /* SimpleAnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADDDEB213604A200714179 /* SimpleAnimationsViewController.swift */; };
+		C4CF45A9212E1E5C0099275F /* NXTooltipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF45A8212E1E5C0099275F /* NXTooltipButton.swift */; };
+		C4DBA68C21449575008CCE5C /* LighthousePresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68521449575008CCE5C /* LighthousePresentationAnimator.swift */; };
+		C4DBA68D21449575008CCE5C /* SimplePresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DBA68621449575008CCE5C /* SimplePresentation.storyboard */; };
+		C4DBA68E21449575008CCE5C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68721449575008CCE5C /* AlertViewController.swift */; };
+		C4DBA68F21449575008CCE5C /* LighthousePresentationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68821449575008CCE5C /* LighthousePresentationSegue.swift */; };
+		C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */; };
+		C4DBA69121449575008CCE5C /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68A21449575008CCE5C /* ModalViewController.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F67E20348A760038D96B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* MainViewController.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
@@ -54,6 +63,15 @@
 		C495668B2111F3BB00EF10EE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		C495668F2111FB2400EF10EE /* StackView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		C49566912111FB3200EF10EE /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		C4ADDDE92136042C00714179 /* SimpleAnimations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAnimations.storyboard; sourceTree = "<group>"; };
+		C4ADDDEB213604A200714179 /* SimpleAnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnimationsViewController.swift; sourceTree = "<group>"; };
+		C4CF45A8212E1E5C0099275F /* NXTooltipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXTooltipButton.swift; sourceTree = "<group>"; };
+		C4DBA68521449575008CCE5C /* LighthousePresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LighthousePresentationAnimator.swift; sourceTree = "<group>"; };
+		C4DBA68621449575008CCE5C /* SimplePresentation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimplePresentation.storyboard; sourceTree = "<group>"; };
+		C4DBA68721449575008CCE5C /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		C4DBA68821449575008CCE5C /* LighthousePresentationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LighthousePresentationSegue.swift; sourceTree = "<group>"; };
+		C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePresentViewController.swift; sourceTree = "<group>"; };
+		C4DBA68A21449575008CCE5C /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		DC08661968B94C9FD3303E1E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ED83F67820348A760038D96B /* NXKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NXKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F67B20348A760038D96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,8 +160,46 @@
 				C45EF9DA211158C600810941 /* NXView.swift */,
 				C4120781212C7366006D350E /* TooltipView.swift */,
 				C4120783212C7383006D350E /* TooltipView.xib */,
+				C4CF45A8212E1E5C0099275F /* NXTooltipButton.swift */,
 			);
 			path = SimpleViews;
+			sourceTree = "<group>";
+		};
+		C4ADDDE8213603EF00714179 /* SimpleAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				C4ADDDE92136042C00714179 /* SimpleAnimations.storyboard */,
+				C4ADDDEB213604A200714179 /* SimpleAnimationsViewController.swift */,
+			);
+			path = SimpleAnimations;
+			sourceTree = "<group>";
+		};
+		C4DBA68221449559008CCE5C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C4DBA68421449575008CCE5C /* PresentationAnimators */,
+				C4DBA68621449575008CCE5C /* SimplePresentation.storyboard */,
+				C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */,
+				C4DBA68821449575008CCE5C /* LighthousePresentationSegue.swift */,
+				C4DBA68A21449575008CCE5C /* ModalViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C4DBA68421449575008CCE5C /* PresentationAnimators */ = {
+			isa = PBXGroup;
+			children = (
+				C4DBA68521449575008CCE5C /* LighthousePresentationAnimator.swift */,
+			);
+			path = PresentationAnimators;
+			sourceTree = "<group>";
+		};
+		C4DBA692214495A6008CCE5C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				C4DBA68721449575008CCE5C /* AlertViewController.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		ED83F66F20348A760038D96B = {
@@ -178,6 +234,9 @@
 				C45EF9CA2111295F00810941 /* StackView */,
 				C45EF9C92111295F00810941 /* TextView */,
 				C45EF9CD2111295F00810941 /* IntrinsicSize */,
+				C4ADDDE8213603EF00714179 /* SimpleAnimations */,
+				C4DBA68221449559008CCE5C /* Presentation */,
+				C4DBA692214495A6008CCE5C /* Alerts */,
 				ED83F68420348A760038D96B /* Info.plist */,
 				ED83F68520348A760038D96B /* NXKit.entitlements */,
 			);
@@ -292,6 +351,8 @@
 				ED83F68020348A760038D96B /* Assets.xcassets in Resources */,
 				C49566902111FB2400EF10EE /* StackView.storyboard in Resources */,
 				C4120784212C7383006D350E /* TooltipView.xib in Resources */,
+				C4DBA68D21449575008CCE5C /* SimplePresentation.storyboard in Resources */,
+				C4ADDDEA2136042C00714179 /* SimpleAnimations.storyboard in Resources */,
 				C45EF9D62111512D00810941 /* SimpleViews.storyboard in Resources */,
 				ED83F68320348A760038D96B /* Main.storyboard in Resources */,
 				C45EF9D1211129A300810941 /* TextView.storyboard in Resources */,
@@ -369,13 +430,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DBA69121449575008CCE5C /* ModalViewController.swift in Sources */,
 				C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */,
 				C45EF9DB211158C600810941 /* NXView.swift in Sources */,
+				C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */,
 				C4120782212C7366006D350E /* TooltipView.swift in Sources */,
+				C4DBA68F21449575008CCE5C /* LighthousePresentationSegue.swift in Sources */,
 				ED83F67E20348A760038D96B /* MainViewController.swift in Sources */,
+				C4CF45A9212E1E5C0099275F /* NXTooltipButton.swift in Sources */,
+				C4ADDDEC213604A200714179 /* SimpleAnimationsViewController.swift in Sources */,
 				C45EF9D82111528900810941 /* NSView_.swift in Sources */,
 				C49566922111FB3200EF10EE /* StackViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
+				C4DBA68C21449575008CCE5C /* LighthousePresentationAnimator.swift in Sources */,
+				C4DBA68E21449575008CCE5C /* AlertViewController.swift in Sources */,
 				C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

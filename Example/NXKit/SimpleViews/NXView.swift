@@ -9,22 +9,26 @@
 import AppKit
 import NXKit
 
-class NXView: NSView {
+open class NXView: NSView {
     // border
-    @IBInspectable var cornerRadius: CGFloat = 0
-    @IBInspectable var borderWidth: CGFloat = 0
-    @IBInspectable var borderColor: NSColor = NSColor.clear
+    @IBInspectable open var cornerRadius: CGFloat = 0
+    @IBInspectable open var borderWidth: CGFloat = 0
+    @IBInspectable open var borderColor: NSColor?
     // background
-    @IBInspectable public var backgroundColor: NSColor = NSColor.clear
+    @IBInspectable open var backgroundColor: NSColor?
     
-    public var controlRecords: [NXViewControlRecord] = []
+    open var userInfo: Any?
+    open var controlRecords: [NXViewControlRecord] = []
     
-    override func viewDidMoveToWindow() {
+    override open func viewDidMoveToWindow() {
         super.viewDidMoveToWindow()
+        wantsLayer = true
         
         disableHover()
         enableHover()
     }
+
+    override open var wantsUpdateLayer: Bool { return true }
     
     open override func updateLayer() {
         super.updateLayer()

@@ -17,7 +17,8 @@ class MainViewController: NSViewController {
         (name: "SimpleViews", cat: "View"),
         (name: "TextView", cat: "View"),
         (name: "StackView", cat: "View"),
-        (name: "Intrinsic Size", cat: "View")
+        (name: "SimpleAnimations", cat: "View"),
+        (name: "SimplePresentation", cat: "View")
     ]
     
     override func viewDidLoad() {
@@ -93,6 +94,10 @@ extension MainViewController: NSTableViewDelegate {
             performSegue(withIdentifier: "showTextViewVC", sender: nil)
         } else if row == 2 {
             performSegue(withIdentifier: "showStackViewVC", sender: nil)
+        } else if row == 3 {
+            performSegue(withIdentifier: "showSimpleAnimationsVC", sender: nil)
+        } else if row == 4 {
+            performSegue(withIdentifier: "showSimplePresentationVC", sender: nil)
         }
     }
 }

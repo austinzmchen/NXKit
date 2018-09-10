@@ -11,7 +11,7 @@ import AppKit
 public protocol BorderStylable {
     var cornerRadius: CGFloat {get set}
     var borderWidth: CGFloat {get set}
-    var borderColor: NSColor {get set}
+    var borderColor: NSColor? {get set}
     
     func updateBorderStyle()
 }
@@ -20,7 +20,7 @@ extension BorderStylable where Self : NSView {
     public func updateBorderStyle() {
         layer?.cornerRadius = cornerRadius
         layer?.borderWidth = borderWidth
-        layer?.borderColor = borderColor.cgColor
+        if let v = borderColor { layer?.borderColor = v.cgColor }
     }
 }
 

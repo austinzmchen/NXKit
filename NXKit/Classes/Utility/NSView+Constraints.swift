@@ -7,6 +7,12 @@
 
 import AppKit
 
+public extension NSEdgeInsets {
+    public init(uniform: CGFloat) {
+        self.init(top: uniform, left: uniform, bottom: uniform, right: uniform)
+    }
+}
+
 public enum SnapOption {
     case uniformInset(CGFloat)
     case insets(NSEdgeInsets)
