@@ -16,6 +16,7 @@ open class NXView: NSView, Hoverable, BorderStylable, BackgroundStylable, Target
     // background
     @IBInspectable public var backgroundColor: NSColor?
     
+    open var userInfo: Any?
     open var controlRecords: [NXViewControlRecord] = []
     
     // MARK: life cycle

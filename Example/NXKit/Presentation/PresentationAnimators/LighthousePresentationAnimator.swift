@@ -7,21 +7,30 @@
 //
 
 import AppKit
+import NXKit
 
 class LighthousePresentationAnimator: NSObject, NSViewControllerPresentationAnimator {
+    
+    var duration: Double = 0.5
+    
+    var darkColor: NSColor = .black
+    var darkAlpha: CGFloat = 0.65
+    
+    private let kDefaultMacOSLightGrey = NSColor.init(red: 236/255.0, green: 236/255.0, blue: 236/255.0, alpha: 1).cgColor
+    
     func animatePresentation(of viewController: NSViewController, from fromViewController: NSViewController) {
         let fromVC = fromViewController
         let toVC = viewController
         toVC.view.wantsLayer = true
-        toVC.view.layer?.backgroundColor = NSColor.init(red: 236/255.0, green: 236/255.0, blue: 236/255.0, alpha: 1).cgColor
+        toVC.view.layer?.backgroundColor = kDefaultMacOSLightGrey
         toVC.view.alphaValue = 0
         
         let containerView = NXView.init(frame: fromVC.view.bounds)
         containerView.layerContentsRedrawPolicy = .onSetNeedsDisplay
         containerView.alphaValue = 0
+        containerView.backgroundColor = darkColor
         containerView.userInfo = containerViewTag
         
-        containerView.backgroundColor = NSColor.gray
         fromVC.view.addSubview(toVC.view)
         fromVC.view.addSubview(containerView, positioned: .below, relativeTo: toVC.view)
         
@@ -30,8 +39,8 @@ class LighthousePresentationAnimator: NSObject, NSViewControllerPresentationAnim
                            y: (containerView.frame.height - f.height) / 2)
         toVC.view.frame = f
 
-        NSView.animate(withDuration: 0.5, animations: {
-            containerView.alphaValue = 0.8
+        NSView.animate(withDuration: duration, animations: {
+            containerView.alphaValue = self.darkAlpha
             toVC.view.alphaValue = 1
         })
     }
@@ -54,7 +63,7 @@ class LighthousePresentationAnimator: NSObject, NSViewControllerPresentationAnim
         topVC.view.wantsLayer = true
         topVC.view.layerContentsRedrawPolicy = .onSetNeedsDisplay
         
-        NSView.animate(withDuration: 0.5, animations: {
+        NSView.animate(withDuration: duration, animations: {
             containerView.alphaValue = 0
             topVC.view.alphaValue = 0
         }) {

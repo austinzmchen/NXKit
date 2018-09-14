@@ -822,10 +822,20 @@
                         <segue destination="NSh-nC-qBE" kind="show" identifier="showStackViewVC" id="bYw-bL-A8T"/>
                         <segue destination="PGp-Dl-uyd" kind="show" identifier="showSimpleAnimationsVC" id="YYV-Ev-pJm"/>
                         <segue destination="Ube-sA-GOE" kind="show" identifier="showSimplePresentationVC" id="yCs-VK-a26"/>
+                        <segue destination="nuY-ul-jXK" kind="show" id="cgO-it-a4I"/>
+                        <segue destination="0C9-ei-ocq" kind="show" identifier="showSimpleEmbedVC" id="49j-bT-5Sd"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="75" y="722"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="cR8-hC-hEL">
+            <objects>
+                <controllerPlaceholder id="nuY-ul-jXK" sceneMemberID="viewController"/>
+                <customObject id="GzM-T4-pzQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="1022"/>
         </scene>
         <!--SimpleViews-->
         <scene sceneID="ZI0-qy-rrT">
@@ -866,6 +876,14 @@
                 <customObject id="X8c-gg-kwD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="540" y="1029"/>
+        </scene>
+        <!--EmbedVC-->
+        <scene sceneID="TXM-s2-ZLM">
+            <objects>
+                <controllerPlaceholder storyboardName="EmbedVC" id="0C9-ei-ocq" sceneMemberID="viewController"/>
+                <customObject id="CVS-7q-E5j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="1022"/>
         </scene>
     </scenes>
 </document>

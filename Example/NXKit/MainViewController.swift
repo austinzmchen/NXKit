@@ -18,7 +18,9 @@ class MainViewController: NSViewController {
         (name: "TextView", cat: "View"),
         (name: "StackView", cat: "View"),
         (name: "SimpleAnimations", cat: "View"),
-        (name: "SimplePresentation", cat: "View")
+        (name: "SimplePresentation", cat: "View"),
+        (name: "Alert", cat: "View"),
+        (name: "Embeded View Controller", cat: "View Controller")
     ]
     
     override func viewDidLoad() {
@@ -98,6 +100,10 @@ extension MainViewController: NSTableViewDelegate {
             performSegue(withIdentifier: "showSimpleAnimationsVC", sender: nil)
         } else if row == 4 {
             performSegue(withIdentifier: "showSimplePresentationVC", sender: nil)
+        } else if row == 5 {
+            performSegue(withIdentifier: "showSimpleAlertVC", sender: nil)
+        } else if row == 6 {
+            performSegue(withIdentifier: "showSimpleEmbedVC", sender: nil)
         }
     }
 }

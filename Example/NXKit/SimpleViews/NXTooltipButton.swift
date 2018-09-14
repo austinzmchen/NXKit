@@ -9,7 +9,7 @@
 import AppKit
 import NXKit
 
-open class NXTooltipButton: NSButton {
+open class NXTooltipButton: NXButton {
     
     public var texts: (normal: String, pressed: String) = (normal: "Text", pressed: "Pressed!")
     
@@ -52,6 +52,8 @@ open class NXTooltipButton: NSButton {
     
     // MARK: events
     open override func mouseEntered(with event: NSEvent) {
+        super.mouseEntered(with: event)
+        
         tooltipView.label.stringValue = texts.normal
         
         tooltipView.invalidateIntrinsicContentSize()
@@ -60,10 +62,14 @@ open class NXTooltipButton: NSButton {
     }
     
     open override func mouseExited(with event: NSEvent) {
+        super.mouseExited(with: event)
+        
         popupWindow.close()
     }
     
     open override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+        
         buttonPressed()
         tooltipView.invalidateIntrinsicContentSize()
         needsLayout = true
@@ -72,11 +78,5 @@ open class NXTooltipButton: NSButton {
     // MARK: instance methods
     func buttonPressed() {
         tooltipView.label.stringValue = texts.pressed
-    }
-}
-
-extension NXTooltipButton: Hoverable {
-    open override func cursorUpdate(with event: NSEvent) {
-        NSCursor.pointingHand.set()
     }
 }

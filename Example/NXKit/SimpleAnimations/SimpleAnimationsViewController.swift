@@ -7,6 +7,7 @@
 //
 
 import AppKit
+import NXKit
 
 class SimpleAnimationsViewController: NSViewController {
     @IBOutlet weak var view1: NXView!

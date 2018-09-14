@@ -9,26 +9,26 @@
 import AppKit
 import NXKit
 
-class TooltipView: NSView, NibLoadable {
-    @IBOutlet var contentView: NSView!
-    @IBOutlet weak var label: NSTextField!
+open class TooltipView: NSView, NibLoadable {
+    @IBOutlet open var contentView: NSView!
+    @IBOutlet open weak var label: NSTextField!
     
     // MARK: life cycles
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.translatesAutoresizingMaskIntoConstraints = false
         loadNib(name: "TooltipView")
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.translatesAutoresizingMaskIntoConstraints = false // otherwise window not resizable, weird
         loadNib(name: "TooltipView")
     }
     
-    override var intrinsicContentSize: NSSize {
+    open override var intrinsicContentSize: NSSize {
         var s = label.intrinsicContentSize
         s.width += labelEdgeInsets.left + labelEdgeInsets.right
         s.height += labelEdgeInsets.top + labelEdgeInsets.bottom
