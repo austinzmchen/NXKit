@@ -92,10 +92,20 @@ open class NXButton: NSButton, Hoverable, BorderStylable, BackgroundStylable, Ta
             setBgColor(byState: .disabled)
         }
     }
+
+    override open func mouseDown(with theEvent: NSEvent) {
+        super.mouseDown(with: theEvent)
+        isHighlighted = true
+    }
     
-    open override func hitTest(_ point: NSPoint) -> NSView? {
-        guard userInteractionEnabled else { return nil }
-        return super.hitTest(point)
+    override open func mouseUp(with theEvent: NSEvent) {
+        super.mouseUp(with: theEvent)
+        isHighlighted = false
+    }
+    
+    override open func mouseExited(with theEvent: NSEvent) {
+        super.mouseExited(with: theEvent)
+        isHighlighted = false
     }
 }
 
@@ -110,23 +120,5 @@ public extension NXButton {
         public static let normal = State(rawValue: 1)
         public static let disabled = State(rawValue: 2)
         public static let highlighted = State(rawValue: 4)
-    }
-}
-
-extension NXButton {
-    
-    override open func mouseDown(with theEvent: NSEvent) {
-        super.mouseDown(with: theEvent)
-        isHighlighted = true
-    }
-    
-    override open func mouseUp(with theEvent: NSEvent) {
-        super.mouseUp(with: theEvent)
-        isHighlighted = false
-    }
-    
-    override open func mouseExited(with theEvent: NSEvent) {
-        super.mouseExited(with: theEvent)
-        isHighlighted = false
     }
 }

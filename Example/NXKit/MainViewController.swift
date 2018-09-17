@@ -20,7 +20,8 @@ class MainViewController: NSViewController {
         (name: "SimpleAnimations", cat: "View"),
         (name: "SimplePresentation", cat: "View"),
         (name: "Alert", cat: "View"),
-        (name: "Embeded View Controller", cat: "View Controller")
+        (name: "Embeded View Controller", cat: "View Controller"),
+        (name: "Navigation View Controller", cat: "View Controller")
     ]
     
     override func viewDidLoad() {
@@ -104,6 +105,8 @@ extension MainViewController: NSTableViewDelegate {
             performSegue(withIdentifier: "showSimpleAlertVC", sender: nil)
         } else if row == 6 {
             performSegue(withIdentifier: "showSimpleEmbedVC", sender: nil)
+        } else if row == 7 {
+            performSegue(withIdentifier: "showSimpleNavigationVC", sender: nil)
         }
     }
 }

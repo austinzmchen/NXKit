@@ -21,13 +21,15 @@
 		C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495668B2111F3BB00EF10EE /* TextViewController.swift */; };
 		C49566902111FB2400EF10EE /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C495668F2111FB2400EF10EE /* StackView.storyboard */; };
 		C49566922111FB3200EF10EE /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49566912111FB3200EF10EE /* StackViewController.swift */; };
+		C4A405E5215027D50016963D /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A405E4215027D50016963D /* MainWindowController.swift */; };
+		C4A4061521504A2D0016963D /* SampleViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4061421504A2D0016963D /* SampleViewController1.swift */; };
+		C4A4061721504A750016963D /* SimpleNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A4061621504A750016963D /* SimpleNavigationController.storyboard */; };
+		C4A4061921504B3A0016963D /* SimpleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4061821504B3A0016963D /* SimpleNavigationController.swift */; };
 		C4ADDDEA2136042C00714179 /* SimpleAnimations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ADDDE92136042C00714179 /* SimpleAnimations.storyboard */; };
 		C4ADDDEC213604A200714179 /* SimpleAnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADDDEB213604A200714179 /* SimpleAnimationsViewController.swift */; };
 		C4CF45A9212E1E5C0099275F /* NXTooltipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF45A8212E1E5C0099275F /* NXTooltipButton.swift */; };
-		C4DBA68C21449575008CCE5C /* LighthousePresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68521449575008CCE5C /* LighthousePresentationAnimator.swift */; };
 		C4DBA68D21449575008CCE5C /* SimplePresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DBA68621449575008CCE5C /* SimplePresentation.storyboard */; };
 		C4DBA68E21449575008CCE5C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68721449575008CCE5C /* AlertViewController.swift */; };
-		C4DBA68F21449575008CCE5C /* LighthousePresentationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68821449575008CCE5C /* LighthousePresentationSegue.swift */; };
 		C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */; };
 		C4DBA69121449575008CCE5C /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68A21449575008CCE5C /* ModalViewController.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
@@ -67,13 +69,15 @@
 		C495668B2111F3BB00EF10EE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		C495668F2111FB2400EF10EE /* StackView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		C49566912111FB3200EF10EE /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		C4A405E4215027D50016963D /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		C4A4061421504A2D0016963D /* SampleViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController1.swift; sourceTree = "<group>"; };
+		C4A4061621504A750016963D /* SimpleNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleNavigationController.storyboard; sourceTree = "<group>"; };
+		C4A4061821504B3A0016963D /* SimpleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationController.swift; sourceTree = "<group>"; };
 		C4ADDDE92136042C00714179 /* SimpleAnimations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAnimations.storyboard; sourceTree = "<group>"; };
 		C4ADDDEB213604A200714179 /* SimpleAnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnimationsViewController.swift; sourceTree = "<group>"; };
 		C4CF45A8212E1E5C0099275F /* NXTooltipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXTooltipButton.swift; sourceTree = "<group>"; };
-		C4DBA68521449575008CCE5C /* LighthousePresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LighthousePresentationAnimator.swift; sourceTree = "<group>"; };
 		C4DBA68621449575008CCE5C /* SimplePresentation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimplePresentation.storyboard; sourceTree = "<group>"; };
 		C4DBA68721449575008CCE5C /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		C4DBA68821449575008CCE5C /* LighthousePresentationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LighthousePresentationSegue.swift; sourceTree = "<group>"; };
 		C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePresentViewController.swift; sourceTree = "<group>"; };
 		C4DBA68A21449575008CCE5C /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		DC08661968B94C9FD3303E1E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -178,6 +182,16 @@
 			path = SimpleViews;
 			sourceTree = "<group>";
 		};
+		C4A4061321504A070016963D /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C4A4061821504B3A0016963D /* SimpleNavigationController.swift */,
+				C4A4061621504A750016963D /* SimpleNavigationController.storyboard */,
+				C4A4061421504A2D0016963D /* SampleViewController1.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		C4ADDDE8213603EF00714179 /* SimpleAnimations */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,21 +204,11 @@
 		C4DBA68221449559008CCE5C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C4DBA68421449575008CCE5C /* PresentationAnimators */,
 				C4DBA68621449575008CCE5C /* SimplePresentation.storyboard */,
 				C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */,
-				C4DBA68821449575008CCE5C /* LighthousePresentationSegue.swift */,
 				C4DBA68A21449575008CCE5C /* ModalViewController.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		C4DBA68421449575008CCE5C /* PresentationAnimators */ = {
-			isa = PBXGroup;
-			children = (
-				C4DBA68521449575008CCE5C /* LighthousePresentationAnimator.swift */,
-			);
-			path = PresentationAnimators;
 			sourceTree = "<group>";
 		};
 		C4DBA692214495A6008CCE5C /* Alerts */ = {
@@ -240,9 +244,10 @@
 			isa = PBXGroup;
 			children = (
 				ED83F67B20348A760038D96B /* AppDelegate.swift */,
+				C4A405E4215027D50016963D /* MainWindowController.swift */,
 				ED83F67D20348A760038D96B /* MainViewController.swift */,
-				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				ED83F68120348A760038D96B /* Main.storyboard */,
+				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				C45EF9D2211150DF00810941 /* SimpleViews */,
 				C45EF9CA2111295F00810941 /* StackView */,
 				C45EF9C92111295F00810941 /* TextView */,
@@ -251,6 +256,7 @@
 				C4DBA68221449559008CCE5C /* Presentation */,
 				C4DBA692214495A6008CCE5C /* Alerts */,
 				C43D40E221499B000076CE8C /* EmbedVC */,
+				C4A4061321504A070016963D /* NavigationController */,
 				ED83F68420348A760038D96B /* Info.plist */,
 				ED83F68520348A760038D96B /* NXKit.entitlements */,
 			);
@@ -370,6 +376,7 @@
 				C4ADDDEA2136042C00714179 /* SimpleAnimations.storyboard in Resources */,
 				C45EF9D62111512D00810941 /* SimpleViews.storyboard in Resources */,
 				ED83F68320348A760038D96B /* Main.storyboard in Resources */,
+				C4A4061721504A750016963D /* SimpleNavigationController.storyboard in Resources */,
 				C45EF9D1211129A300810941 /* TextView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,15 +457,16 @@
 				C45EF9DB211158C600810941 /* NXView.swift in Sources */,
 				C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */,
 				C4120782212C7366006D350E /* TooltipView.swift in Sources */,
-				C4DBA68F21449575008CCE5C /* LighthousePresentationSegue.swift in Sources */,
 				ED83F67E20348A760038D96B /* MainViewController.swift in Sources */,
+				C4A4061921504B3A0016963D /* SimpleNavigationController.swift in Sources */,
 				C4CF45A9212E1E5C0099275F /* NXTooltipButton.swift in Sources */,
 				C4ADDDEC213604A200714179 /* SimpleAnimationsViewController.swift in Sources */,
+				C4A4061521504A2D0016963D /* SampleViewController1.swift in Sources */,
+				C4A405E5215027D50016963D /* MainWindowController.swift in Sources */,
 				C45EF9D82111528900810941 /* NSView_.swift in Sources */,
 				C49566922111FB3200EF10EE /* StackViewController.swift in Sources */,
 				C43D40E721499D3F0076CE8C /* EmbedVCViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
-				C4DBA68C21449575008CCE5C /* LighthousePresentationAnimator.swift in Sources */,
 				C4DBA68E21449575008CCE5C /* AlertViewController.swift in Sources */,
 				C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */,
 			);

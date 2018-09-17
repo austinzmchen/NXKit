@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.13.2"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -674,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SampleModalSheet" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="NXKit_Example" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,26 +726,13 @@
         <!--Modal View Controller-->
         <scene sceneID="9o3-yd-sZO">
             <objects>
-                <viewController storyboardIdentifier="kModalViewController" id="qxs-V2-X5v" customClass="ModalViewController" customModule="SampleModalSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="kModalViewController" id="qxs-V2-X5v" customClass="ModalViewController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="6by-Z3-P6I">
                         <rect key="frame" x="0.0" y="0.0" width="420" height="179"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-nc-fOf">
-                                <rect key="frame" x="224" y="13" width="93" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="0q3-85-QKe"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2Uz-yc-B0f">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="submitButtonClicked:" target="qxs-V2-X5v" id="AU9-qd-DXe"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nfJ-vz-n4p">
-                                <rect key="frame" x="330" y="13" width="82" height="32"/>
+                                <rect key="frame" x="319" y="13" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6nW-cj-cjN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -767,11 +755,9 @@ Gw
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="nfJ-vz-n4p" secondAttribute="bottom" constant="20" id="1RJ-e2-cu4"/>
-                            <constraint firstItem="GJs-nc-fOf" firstAttribute="bottom" secondItem="nfJ-vz-n4p" secondAttribute="bottom" id="7b7-HY-B2P"/>
                             <constraint firstItem="QP1-TG-Xwo" firstAttribute="centerX" secondItem="6by-Z3-P6I" secondAttribute="centerX" id="7v7-Xi-86l"/>
-                            <constraint firstItem="nfJ-vz-n4p" firstAttribute="leading" secondItem="GJs-nc-fOf" secondAttribute="trailing" constant="25" id="Bhj-TV-VhT"/>
                             <constraint firstItem="QP1-TG-Xwo" firstAttribute="top" secondItem="6by-Z3-P6I" secondAttribute="top" constant="38" id="deI-JO-cOT"/>
-                            <constraint firstAttribute="trailing" secondItem="nfJ-vz-n4p" secondAttribute="trailing" constant="14" id="eRW-Qf-eAV"/>
+                            <constraint firstAttribute="trailing" secondItem="nfJ-vz-n4p" secondAttribute="trailing" constant="25" id="eRW-Qf-eAV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -785,7 +771,7 @@ Gw
         <!--Simple Present View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="SimplePresentViewController" customModule="SampleModalSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="SimplePresentViewController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -842,7 +828,7 @@ Gw
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="qxs-V2-X5v" kind="custom" identifier="" customClass="LighthousePresentationSegue" customModule="SampleModalSheet" customModuleProvider="target" id="xWU-UJ-SNO"/>
+                                    <segue destination="qxs-V2-X5v" kind="custom" identifier="" customClass="LighthousePresentationSegue" customModule="NXKit_Example" customModuleProvider="target" id="xWU-UJ-SNO"/>
                                 </connections>
                             </button>
                             <box fixedFrame="YES" title="Segue Transitions" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-F1-rq9">
@@ -928,7 +914,7 @@ Gw
         <!--Alert View Controller-->
         <scene sceneID="HpG-e6-r77">
             <objects>
-                <viewController id="Eor-ZL-Qsd" customClass="AlertViewController" customModule="SampleModalSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Eor-ZL-Qsd" customClass="AlertViewController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="lbV-Rd-WN9">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>

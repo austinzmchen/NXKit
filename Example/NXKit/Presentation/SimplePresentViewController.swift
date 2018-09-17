@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import NXKit
 
 class SimplePresentViewController: NSViewController {
     // manual transitions:

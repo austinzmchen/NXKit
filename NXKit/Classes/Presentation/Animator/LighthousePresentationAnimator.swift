@@ -9,16 +9,16 @@
 import AppKit
 import NXKit
 
-class LighthousePresentationAnimator: NSObject, NSViewControllerPresentationAnimator {
+open class LighthousePresentationAnimator: NSObject, NSViewControllerPresentationAnimator {
     
-    var duration: Double = 0.5
+    public var duration: Double = 0.5
     
-    var darkColor: NSColor = .black
-    var darkAlpha: CGFloat = 0.65
+    public var darkColor: NSColor = .black
+    public var darkAlpha: CGFloat = 0.65
     
     private let kDefaultMacOSLightGrey = NSColor.init(red: 236/255.0, green: 236/255.0, blue: 236/255.0, alpha: 1).cgColor
     
-    func animatePresentation(of viewController: NSViewController, from fromViewController: NSViewController) {
+    open func animatePresentation(of viewController: NSViewController, from fromViewController: NSViewController) {
         let fromVC = fromViewController
         let toVC = viewController
         toVC.view.wantsLayer = true
@@ -45,7 +45,7 @@ class LighthousePresentationAnimator: NSObject, NSViewControllerPresentationAnim
         })
     }
     
-    func animateDismissal(of viewController: NSViewController, from fromViewController: NSViewController) {
+    open func animateDismissal(of viewController: NSViewController, from fromViewController: NSViewController) {
         let fromVC = fromViewController
         let view = fromVC.view.subviews.first{
             guard let view = $0 as? NXView,

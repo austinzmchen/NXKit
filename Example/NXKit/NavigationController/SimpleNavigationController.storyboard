@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="HEv-DJ-EMW">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DtS-zZ-tbL">
+            <objects>
+                <viewController storyboardIdentifier="kNavVC" id="owy-YW-rRI" customClass="NXNavigationController" customModule="NXKit" sceneMemberID="viewController">
+                    <view key="view" id="dRn-Q6-KuH">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="baa-6M-ooz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="229"/>
+        </scene>
+        <!--Sample View Controller1-->
+        <scene sceneID="XaS-Cj-G4W">
+            <objects>
+                <viewController storyboardIdentifier="kSampleVC" id="v3H-kj-9zu" customClass="SampleViewController1" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Lcu-kd-Vuk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sxL-fR-ISD">
+                                <rect key="frame" x="123" y="175" width="204" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="GH8-NX-0D9"/>
+                                    <constraint firstAttribute="width" constant="200" id="zBq-dd-hr2"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="dFV-fO-nOw">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w7I-4x-yXi">
+                                <rect key="frame" x="44" y="73" width="64" height="32"/>
+                                <buttonCell key="cell" type="push" title="Pop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NXX-ye-7f3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="popButtonClicked:" target="v3H-kj-9zu" id="v9d-oM-C6s"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NXe-96-FEH">
+                                <rect key="frame" x="335" y="73" width="71" height="32"/>
+                                <buttonCell key="cell" type="push" title="Push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lAj-T1-ocm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushButtonClicked:" target="v3H-kj-9zu" id="pNC-0P-QS0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="w7I-4x-yXi" secondAttribute="bottom" constant="80" id="12r-Fe-kSI"/>
+                            <constraint firstItem="sxL-fR-ISD" firstAttribute="centerX" secondItem="Lcu-kd-Vuk" secondAttribute="centerX" id="3Za-ie-LdL"/>
+                            <constraint firstItem="w7I-4x-yXi" firstAttribute="leading" secondItem="Lcu-kd-Vuk" secondAttribute="leading" constant="50" id="7Ta-U1-dlx"/>
+                            <constraint firstItem="sxL-fR-ISD" firstAttribute="top" secondItem="Lcu-kd-Vuk" secondAttribute="top" constant="105" id="E8M-Gf-mLs"/>
+                            <constraint firstAttribute="trailing" secondItem="NXe-96-FEH" secondAttribute="trailing" constant="50" id="ire-aS-2yx"/>
+                            <constraint firstItem="NXe-96-FEH" firstAttribute="centerY" secondItem="w7I-4x-yXi" secondAttribute="centerY" id="oJQ-Lg-M0Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="sxL-fR-ISD" id="QKH-eI-DBO"/>
+                    </connections>
+                </viewController>
+                <customObject id="9Ho-H1-3EG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="229"/>
+        </scene>
+        <!--Simple Navigation Controller-->
+        <scene sceneID="Pr9-jx-XKw">
+            <objects>
+                <viewController id="HEv-DJ-EMW" customClass="SimpleNavigationController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="nLL-O5-3dS">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVh-lo-FNx">
+                                <rect key="frame" x="185" y="218" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IK0-Ib-9fe">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonClicked:" target="HEv-DJ-EMW" id="j5g-CC-FZZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="ns2-Xk-6td" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="229"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.13.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -684,10 +684,9 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
@@ -824,6 +823,7 @@
                         <segue destination="Ube-sA-GOE" kind="show" identifier="showSimplePresentationVC" id="yCs-VK-a26"/>
                         <segue destination="nuY-ul-jXK" kind="show" id="cgO-it-a4I"/>
                         <segue destination="0C9-ei-ocq" kind="show" identifier="showSimpleEmbedVC" id="49j-bT-5Sd"/>
+                        <segue destination="zXh-PN-J98" kind="show" identifier="showSimpleNavigationVC" id="Nwk-UN-vI0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -884,6 +884,14 @@
                 <customObject id="CVS-7q-E5j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="153" y="1022"/>
+        </scene>
+        <!--SimpleNavigationController-->
+        <scene sceneID="d1D-RI-yzH">
+            <objects>
+                <controllerPlaceholder storyboardName="SimpleNavigationController" id="zXh-PN-J98" sceneMemberID="viewController"/>
+                <customObject id="maT-ey-xVR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="1025"/>
         </scene>
     </scenes>
 </document>
