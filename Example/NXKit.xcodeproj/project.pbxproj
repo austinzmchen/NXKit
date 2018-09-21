@@ -32,6 +32,10 @@
 		C4DBA68E21449575008CCE5C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68721449575008CCE5C /* AlertViewController.swift */; };
 		C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */; };
 		C4DBA69121449575008CCE5C /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBA68A21449575008CCE5C /* ModalViewController.swift */; };
+		C4EE3D8B2154A44000A5DCD1 /* SimpleTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EE3D8A2154A44000A5DCD1 /* SimpleTableView.storyboard */; };
+		C4EE3D8D2154A45D00A5DCD1 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE3D8C2154A45D00A5DCD1 /* SimpleTableViewController.swift */; };
+		C4EE3D9321557F9400A5DCD1 /* SampleViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE3D9221557F9400A5DCD1 /* SampleViewController0.swift */; };
+		C4EE3D95215583E400A5DCD1 /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE3D94215583E400A5DCD1 /* CustomAnimator.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F67E20348A760038D96B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* MainViewController.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
@@ -80,6 +84,10 @@
 		C4DBA68721449575008CCE5C /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C4DBA68921449575008CCE5C /* SimplePresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePresentViewController.swift; sourceTree = "<group>"; };
 		C4DBA68A21449575008CCE5C /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		C4EE3D8A2154A44000A5DCD1 /* SimpleTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleTableView.storyboard; sourceTree = "<group>"; };
+		C4EE3D8C2154A45D00A5DCD1 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		C4EE3D9221557F9400A5DCD1 /* SampleViewController0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController0.swift; sourceTree = "<group>"; };
+		C4EE3D94215583E400A5DCD1 /* CustomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
 		DC08661968B94C9FD3303E1E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ED83F67820348A760038D96B /* NXKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NXKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F67B20348A760038D96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,9 +193,11 @@
 		C4A4061321504A070016963D /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				C4A4061821504B3A0016963D /* SimpleNavigationController.swift */,
 				C4A4061621504A750016963D /* SimpleNavigationController.storyboard */,
+				C4A4061821504B3A0016963D /* SimpleNavigationController.swift */,
+				C4EE3D9221557F9400A5DCD1 /* SampleViewController0.swift */,
 				C4A4061421504A2D0016963D /* SampleViewController1.swift */,
+				C4EE3D94215583E400A5DCD1 /* CustomAnimator.swift */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -217,6 +227,15 @@
 				C4DBA68721449575008CCE5C /* AlertViewController.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		C4EE3D892154A41C00A5DCD1 /* SimpleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				C4EE3D8A2154A44000A5DCD1 /* SimpleTableView.storyboard */,
+				C4EE3D8C2154A45D00A5DCD1 /* SimpleTableViewController.swift */,
+			);
+			path = SimpleTableView;
 			sourceTree = "<group>";
 		};
 		ED83F66F20348A760038D96B = {
@@ -257,6 +276,7 @@
 				C4DBA692214495A6008CCE5C /* Alerts */,
 				C43D40E221499B000076CE8C /* EmbedVC */,
 				C4A4061321504A070016963D /* NavigationController */,
+				C4EE3D892154A41C00A5DCD1 /* SimpleTableView */,
 				ED83F68420348A760038D96B /* Info.plist */,
 				ED83F68520348A760038D96B /* NXKit.entitlements */,
 			);
@@ -369,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED83F68020348A760038D96B /* Assets.xcassets in Resources */,
+				C4EE3D8B2154A44000A5DCD1 /* SimpleTableView.storyboard in Resources */,
 				C49566902111FB2400EF10EE /* StackView.storyboard in Resources */,
 				C4120784212C7383006D350E /* TooltipView.xib in Resources */,
 				C43D40E421499B380076CE8C /* EmbedVC.storyboard in Resources */,
@@ -455,6 +476,7 @@
 				C4DBA69121449575008CCE5C /* ModalViewController.swift in Sources */,
 				C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */,
 				C45EF9DB211158C600810941 /* NXView.swift in Sources */,
+				C4EE3D9321557F9400A5DCD1 /* SampleViewController0.swift in Sources */,
 				C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */,
 				C4120782212C7366006D350E /* TooltipView.swift in Sources */,
 				ED83F67E20348A760038D96B /* MainViewController.swift in Sources */,
@@ -464,9 +486,11 @@
 				C4A4061521504A2D0016963D /* SampleViewController1.swift in Sources */,
 				C4A405E5215027D50016963D /* MainWindowController.swift in Sources */,
 				C45EF9D82111528900810941 /* NSView_.swift in Sources */,
+				C4EE3D95215583E400A5DCD1 /* CustomAnimator.swift in Sources */,
 				C49566922111FB3200EF10EE /* StackViewController.swift in Sources */,
 				C43D40E721499D3F0076CE8C /* EmbedVCViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
+				C4EE3D8D2154A45D00A5DCD1 /* SimpleTableViewController.swift in Sources */,
 				C4DBA68E21449575008CCE5C /* AlertViewController.swift in Sources */,
 				C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */,
 			);

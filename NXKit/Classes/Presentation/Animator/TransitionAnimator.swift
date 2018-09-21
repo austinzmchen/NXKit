@@ -324,7 +324,7 @@ extension TransitionAnimator {
     
     public static var slideLeftAnimator: TransitionAnimator {
         let ta = TransitionAnimator()
-        ta.transition = [.slideLeft, .crossfade]
+        ta.transition = [.slideLeft]//, .crossfade]
         return ta
     }
     

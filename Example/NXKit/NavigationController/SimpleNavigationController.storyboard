@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="HEv-DJ-EMW">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="dRn-TJ-HBY">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
@@ -77,31 +77,163 @@
             </objects>
             <point key="canvasLocation" x="755" y="229"/>
         </scene>
-        <!--Simple Navigation Controller-->
-        <scene sceneID="Pr9-jx-XKw">
+        <!--Sample View Controller0-->
+        <scene sceneID="fdc-lf-unc">
             <objects>
-                <viewController id="HEv-DJ-EMW" customClass="SimpleNavigationController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="nLL-O5-3dS">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                <viewController storyboardIdentifier="kDestVC" id="h6w-CU-WcK" customClass="SampleViewController0" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="wGZ-Nn-gqv">
+                        <rect key="frame" x="0.0" y="0.0" width="296" height="196"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVh-lo-FNx">
-                                <rect key="frame" x="185" y="218" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IK0-Ib-9fe">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Chg-2g-DAL">
+                                <rect key="frame" x="2" y="166" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="boT-Tn-GW0"/>
+                                    <constraint firstAttribute="width" constant="30" id="iu0-BA-7Rc"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSStopProgressTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="g4S-XI-oQO">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="buttonClicked:" target="HEv-DJ-EMW" id="j5g-CC-FZZ"/>
+                                    <action selector="closeButtonClicked:" target="h6w-CU-WcK" id="faq-in-X3Y"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-4X-ucV">
+                                <rect key="frame" x="84" y="34" width="128" height="128"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSUserAccounts" id="Ttb-em-z55"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="CaM-4X-ucV" firstAttribute="centerY" secondItem="wGZ-Nn-gqv" secondAttribute="centerY" id="Xaa-xx-qsS"/>
+                            <constraint firstItem="CaM-4X-ucV" firstAttribute="centerX" secondItem="wGZ-Nn-gqv" secondAttribute="centerX" id="gcu-iT-gvG"/>
+                            <constraint firstItem="Chg-2g-DAL" firstAttribute="top" secondItem="wGZ-Nn-gqv" secondAttribute="top" id="h6o-1Q-4zi"/>
+                            <constraint firstItem="Chg-2g-DAL" firstAttribute="leading" secondItem="wGZ-Nn-gqv" secondAttribute="leading" constant="2" id="ybM-1O-Xuh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="QDH-bX-Zhn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="624"/>
+        </scene>
+        <!--Simple Navigation Controller-->
+        <scene sceneID="2Bc-TF-ql7">
+            <objects>
+                <viewController id="dRn-TJ-HBY" customClass="SimpleNavigationController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="93J-kR-YSa">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A41-bY-UJ0">
+                                <rect key="frame" x="14" y="222" width="108" height="32"/>
+                                <buttonCell key="cell" type="push" title="Slide Down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="64h-fR-892">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" customClass="SlideDownSegue" customModule="NXKit" id="icT-kl-Qga"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-KV-YwS">
+                                <rect key="frame" x="14" y="189" width="91" height="32"/>
+                                <buttonCell key="cell" type="push" title="Slide Up" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nOV-5R-ZfM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" customClass="SlideUpSegue" customModule="NXKit" id="uFE-qo-oQI"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="62o-kc-OFy">
+                                <rect key="frame" x="14" y="156" width="97" height="32"/>
+                                <buttonCell key="cell" type="push" title="Slide Left" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ag1-0n-gPs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" customClass="SlideLeftSegue" customModule="NXKit" id="qqK-Ca-HAu"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xur-U1-NyC">
+                                <rect key="frame" x="14" y="123" width="106" height="32"/>
+                                <buttonCell key="cell" type="push" title="Slide Right" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1tu-gz-zYu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" customClass="SlideRightSegue" customModule="NXKit" id="FqS-m8-NVO"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-xc-gxa">
+                                <rect key="frame" x="14" y="90" width="102" height="32"/>
+                                <buttonCell key="cell" type="push" title="Crossfade" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="glb-yO-hDB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" customClass="CrossfadeSegue" customModule="NXKit" id="VHb-my-aSO"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-P3-svj">
+                                <rect key="frame" x="14" y="57" width="150" height="32"/>
+                                <buttonCell key="cell" type="push" title="Configured Segue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CNh-Cj-x2J">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" identifier="kNXConfigured" customClass="PresentWithAnimatorSegue" customModule="NXKit" id="T9a-zi-CgJ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Svr-rO-WAe">
+                                <rect key="frame" x="14" y="24" width="146" height="32"/>
+                                <buttonCell key="cell" type="push" title="Custom Animator" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b0h-jW-Osw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="h6w-CU-WcK" kind="custom" identifier="kNXCustomAnimator" customClass="PresentWithAnimatorSegue" customModule="NXKit" id="cEQ-Mg-IdM"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Ce-TOk">
+                                <rect key="frame" x="202" y="222" width="165" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="NavigationController" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dDw-0T-kVc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonClicked:" target="dRn-TJ-HBY" id="R16-nL-cnK"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="T4q-P3-svj" firstAttribute="leading" secondItem="93J-kR-YSa" secondAttribute="leading" constant="20" id="1NP-cC-ja1"/>
+                            <constraint firstItem="lgv-KV-YwS" firstAttribute="top" secondItem="A41-bY-UJ0" secondAttribute="bottom" constant="12" id="E36-tE-9BC"/>
+                            <constraint firstItem="T4q-P3-svj" firstAttribute="top" secondItem="v9q-xc-gxa" secondAttribute="bottom" constant="12" id="Hg8-a0-wl8"/>
+                            <constraint firstItem="A41-bY-UJ0" firstAttribute="leading" secondItem="93J-kR-YSa" secondAttribute="leading" constant="20" id="INh-pI-47z"/>
+                            <constraint firstItem="v9q-xc-gxa" firstAttribute="top" secondItem="xur-U1-NyC" secondAttribute="bottom" constant="12" id="PJg-xK-Kew"/>
+                            <constraint firstItem="62o-kc-OFy" firstAttribute="top" secondItem="lgv-KV-YwS" secondAttribute="bottom" constant="12" id="QM2-QZ-zF0"/>
+                            <constraint firstItem="xur-U1-NyC" firstAttribute="leading" secondItem="93J-kR-YSa" secondAttribute="leading" constant="20" id="RfD-jB-4l8"/>
+                            <constraint firstItem="Svr-rO-WAe" firstAttribute="leading" secondItem="T4q-P3-svj" secondAttribute="leading" id="b6m-Dl-VMD"/>
+                            <constraint firstItem="Svr-rO-WAe" firstAttribute="top" secondItem="T4q-P3-svj" secondAttribute="bottom" constant="12" id="dkm-c2-ihD"/>
+                            <constraint firstItem="62o-kc-OFy" firstAttribute="leading" secondItem="93J-kR-YSa" secondAttribute="leading" constant="20" id="h9E-pV-4Ur"/>
+                            <constraint firstItem="xur-U1-NyC" firstAttribute="top" secondItem="62o-kc-OFy" secondAttribute="bottom" constant="12" id="iMh-w7-Xr4"/>
+                            <constraint firstItem="A41-bY-UJ0" firstAttribute="top" secondItem="93J-kR-YSa" secondAttribute="top" constant="20" id="mmH-EO-eue"/>
+                            <constraint firstItem="lgv-KV-YwS" firstAttribute="leading" secondItem="93J-kR-YSa" secondAttribute="leading" constant="20" id="ncF-a4-mYV"/>
+                            <constraint firstItem="v9q-xc-gxa" firstAttribute="leading" secondItem="93J-kR-YSa" secondAttribute="leading" constant="20" id="s76-H9-2Z0"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <customObject id="ns2-Xk-6td" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="exa-qb-gF8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="229"/>
+            <point key="canvasLocation" x="-219" y="624"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSStopProgressTemplate" width="11" height="11"/>
+        <image name="NSUserAccounts" width="128" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="T9a-zi-CgJ"/>
+    </inferredMetricsTieBreakers>
 </document>
