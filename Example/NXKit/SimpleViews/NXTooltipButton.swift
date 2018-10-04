@@ -15,6 +15,7 @@ open class NXTooltipButton: NXButton {
     
     private var tooltipView = TooltipView()
     private var popupWindow = NSWindow(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
+    private var noteToken: NSObjectProtocol?
     
     // MARK: life cycles
     open override func viewDidMoveToWindow() {
@@ -31,8 +32,19 @@ open class NXTooltipButton: NXButton {
         
         tooltipView.translatesAutoresizingMaskIntoConstraints = false
         popupWindow.contentView?.addSubview(tooltipView)
+        
+        noteToken = NSWorkspace.shared.notificationCenter.addObserver(forName: NSWorkspace
+            .didDeactivateApplicationNotification, object: nil, queue: nil)
+        { (note) in
+            if let info = note.userInfo,
+                let app = info[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
+                app.localizedName == NSApplication.shared.appName
+            {
+                self.popupWindow.close()
+            }
+        }
     }
-    
+
     open override func layout() {
         super.layout()
         
@@ -53,17 +65,16 @@ open class NXTooltipButton: NXButton {
     // MARK: events
     open override func mouseEntered(with event: NSEvent) {
         super.mouseEntered(with: event)
-        
-        tooltipView.label.stringValue = texts.normal
-        
-        tooltipView.invalidateIntrinsicContentSize()
-        needsLayout = true
-        popupWindow.makeKeyAndOrderFront(nil)
+        resetPopup()
+    }
+    
+    open override func mouseMoved(with event: NSEvent) {
+        super.mouseMoved(with: event)
+        resetPopup()
     }
     
     open override func mouseExited(with event: NSEvent) {
         super.mouseExited(with: event)
-        
         popupWindow.close()
     }
     
@@ -73,6 +84,16 @@ open class NXTooltipButton: NXButton {
         buttonPressed()
         tooltipView.invalidateIntrinsicContentSize()
         needsLayout = true
+    }
+}
+
+extension NXTooltipButton {
+    private func resetPopup() {
+        tooltipView.label.stringValue = texts.normal
+        
+        tooltipView.invalidateIntrinsicContentSize()
+        needsLayout = true
+        popupWindow.makeKeyAndOrderFront(nil)
     }
     
     // MARK: instance methods

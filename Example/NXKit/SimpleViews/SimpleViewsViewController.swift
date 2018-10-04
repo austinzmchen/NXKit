@@ -16,4 +16,11 @@ class SimpleViewsViewController: NSViewController {
     }
     
     @IBOutlet var menu1: NSMenu!
+    @IBOutlet weak var disabledTextfield: NSTextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        disabledTextfield.disableInteraction(true)
+    }
 }

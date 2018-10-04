@@ -817,13 +817,13 @@
                     <connections>
                         <outlet property="tableView" destination="sfS-Sf-XzI" id="qoV-Kh-pHL"/>
                         <segue destination="ZME-p0-ZGg" kind="show" identifier="showTextViewVC" id="pKL-2q-RD2"/>
-                        <segue destination="Nh1-Wj-ZNG" kind="show" identifier="showSimpleViewsVC" id="eyZ-cX-Uab"/>
                         <segue destination="NSh-nC-qBE" kind="show" identifier="showStackViewVC" id="bYw-bL-A8T"/>
                         <segue destination="PGp-Dl-uyd" kind="show" identifier="showSimpleAnimationsVC" id="YYV-Ev-pJm"/>
                         <segue destination="Ube-sA-GOE" kind="show" identifier="showSimplePresentationVC" id="yCs-VK-a26"/>
                         <segue destination="0C9-ei-ocq" kind="show" identifier="showSimpleEmbedVC" id="49j-bT-5Sd"/>
                         <segue destination="zXh-PN-J98" kind="show" identifier="showSimpleNavigationVC" id="Nwk-UN-vI0"/>
                         <segue destination="GNC-60-B4U" kind="show" identifier="showSimpleTableVC" id="j8D-u6-mSg"/>
+                        <segue destination="Nh1-Wj-ZNG" kind="show" identifier="showSimpleViewsVC" id="rhL-jl-xJb"/>
                     </connections>
                 </viewController>
             </objects>

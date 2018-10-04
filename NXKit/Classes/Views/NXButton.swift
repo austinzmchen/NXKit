@@ -9,8 +9,6 @@ import AppKit
 
 open class NXButton: NSButton, Hoverable, BorderStylable, BackgroundStylable, TargetActionable {
     
-    @IBInspectable public var userInteractionEnabled: Bool = true
-    
     // border
     @IBInspectable public var cornerRadius: CGFloat = 0
     @IBInspectable public var borderWidth: CGFloat = 0

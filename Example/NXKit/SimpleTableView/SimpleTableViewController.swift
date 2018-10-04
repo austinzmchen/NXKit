@@ -40,6 +40,15 @@ extension SimpleTableViewController: NSTableViewDataSource, NSTableViewDelegate 
         }
     }
     
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        print("shouldSelectRow")
+        return true
+    }
+    
+    func tableViewSelectionIsChanging(_ notification: Notification) {
+        print("tableViewSelectionIsChanging")
+    }
+    
     @objc func tableViewDoubleClicked(_ sender: Any) {
     }
 }

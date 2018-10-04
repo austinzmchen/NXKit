@@ -90,6 +90,15 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="userInteractionEnabled" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE9-qt-ClI">
+                                <rect key="frame" x="31" y="37" width="163" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="This textfield disabled" drawsBackground="YES" id="KmV-72-KSM">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="v34-hL-5HZ" firstAttribute="top" secondItem="caC-td-0Sx" secondAttribute="top" constant="72" id="Mpg-0N-87R"/>
@@ -98,6 +107,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="Sc2-GF-fB2" id="vHy-Zh-DeL"/>
+                        <outlet property="disabledTextfield" destination="CE9-qt-ClI" id="bra-oE-DqJ"/>
                         <outlet property="menu1" destination="YaX-j9-NFB" id="iwU-kR-sbG"/>
                     </connections>
                 </viewController>

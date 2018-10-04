@@ -16,6 +16,10 @@ open class NXView: NSView, Hoverable, BorderStylable, BackgroundStylable, Target
     // background
     @IBInspectable public var backgroundColor: NSColor?
     
+    @IBInspectable public var userInteractionEnabled: Bool = true {
+        didSet { disableInteraction(userInteractionEnabled) }
+    }
+    
     open var userInfo: Any?
     open var controlRecords: [NXViewControlRecord] = []
     

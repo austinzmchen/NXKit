@@ -436,7 +436,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NXKit_Example/Pods-NXKit_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NXKit_Example/Pods-NXKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NXKit/NXKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -445,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NXKit_Example/Pods-NXKit_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NXKit_Example/Pods-NXKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3E80D3E9BAB77B95EB3B3FD /* [CP] Check Pods Manifest.lock */ = {

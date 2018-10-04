@@ -30,4 +30,20 @@ public extension NSView {
     public func removeSubviews() {
         subviews = []
     }
+    
+    public func disableInteraction(_ disable: Bool, filter: ( (NSView) -> Bool )? = nil) {
+        // This might break the scroll view by disabling some internal view, so don't iterate on the subview property of the scroll view itself.
+        guard self is NSScrollView else { return }
+        
+        subviews.forEach{
+            $0.disableInteraction(disable, filter: filter)
+        }
+        
+        if
+            (filter == nil || filter != nil && filter!(self)), // if filter exist, then must be true
+            let c = self as? NSControl
+        {
+            c.isEnabled = !disable
+        }
+    }
 }
