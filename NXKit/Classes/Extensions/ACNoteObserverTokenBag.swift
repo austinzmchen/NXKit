@@ -9,6 +9,7 @@
 import Foundation
 
 open class ACNoteObserverTokenBag: ACTokenBag {
+    
     open override func removeAllTokens() {
         // must be called when observer callback is deallocated, otherwise triggering this note will crash
         tokens.forEach{ NotificationCenter.default.removeObserver($0) }

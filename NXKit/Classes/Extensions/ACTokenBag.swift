@@ -15,17 +15,16 @@ public protocol ACTokenBagType {
 
 open class ACTokenBag {
     var tokens: [NSObjectProtocol] = [] //< The tokens registered with NSNotificationCenter
-    
-    deinit {
-        removeAllTokens()
-    }
+
+    public init() {}
+    deinit { removeAllTokens() }
     
     /// The Sync Coordinator holds onto tokens used to register with the NSNotificationCenter.
-    func addToken(_ token: NSObjectProtocol) {
+    open func addToken(_ token: NSObjectProtocol) {
         tokens.append(token)
     }
     
-    func removeAllTokens() {
+    open func removeAllTokens() {
         tokens.removeAll()
     }
 }

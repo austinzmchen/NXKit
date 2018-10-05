@@ -15,7 +15,7 @@ public struct NXFocusInfo {
 public typealias NXFocusStatesInfo = (on: NXFocusInfo, off: NXFocusInfo)
 
 @IBDesignable
-public class NXFocusRingView: NXView {
+open class NXFocusRingView: NXView {
     
     //------------------------------------------------------------------------
     // MARK: focus setters
@@ -57,14 +57,14 @@ public class NXFocusRingView: NXView {
     //------------------------------------------------------------------------
     // MARK: life cycle views
     
-    override public func viewDidMoveToWindow() {
+    open override func viewDidMoveToWindow() {
         super.viewDidMoveToWindow()
         guard window != nil else {return} // window == nil when view removed
         
         enableHover()
     }
     
-    public override var wantsUpdateLayer: Bool { return true }
+    open override var wantsUpdateLayer: Bool { return true }
     
     open override func updateLayer() {
         super.updateLayer()
@@ -87,41 +87,37 @@ public class NXFocusRingView: NXView {
             }
         }
     }
-}
-
-// MARK: hover stuff
-public extension NXFocusRingView {
-    override func mouseEntered(with event: NSEvent) {
+    
+    // MARK: hover stuff
+    open override func mouseEntered(with event: NSEvent) {
         if autoHandleHover {
             notifyTargets(.focused)
             isHovering = true
         }
     }
     
-    override func mouseExited(with event: NSEvent) {
+    open override func mouseExited(with event: NSEvent) {
         if autoHandleHover {
             notifyTargets(.unfocused)
             isHovering = false
         }
     }
-}
-
-// MARK: focus ring stuff
-public extension NXFocusRingView {
-    override var canBecomeKeyView: Bool {
+    
+    // MARK: focus ring stuff
+    open override var canBecomeKeyView: Bool {
         return autoHandleFocus
     }
     
-    override var acceptsFirstResponder: Bool {
+    open override var acceptsFirstResponder: Bool {
         return autoHandleFocus
     }
     
-    override func becomeFirstResponder() -> Bool {
+    open override func becomeFirstResponder() -> Bool {
         isFocused = true
         return super.becomeFirstResponder()
     }
     
-    override func resignFirstResponder() -> Bool {
+    open override func resignFirstResponder() -> Bool {
         isFocused = false
         return super.resignFirstResponder()
     }
