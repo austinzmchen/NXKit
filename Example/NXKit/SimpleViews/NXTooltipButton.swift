@@ -13,53 +13,65 @@ open class NXTooltipButton: NXButton {
     
     public var texts: (normal: String, pressed: String) = (normal: "Text", pressed: "Pressed!")
     
-    private var tooltipView = TooltipView()
-    private var popupWindow = NSWindow(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
-    private var noteToken: NSObjectProtocol?
+    /// customize popUp frame postion with this additional offset, coordinate postion at bottom left corner
+    public var popUpOffset = CGPoint.zero
     
+    private var tooltipView: TooltipView?
+    private var popupWindow: NSWindow?
+    private var noteTokenBag = ACNoteObserverTokenBag()
+    
+    //------------------------------------------------------------------------
     // MARK: life cycles
+    
     open override func viewDidMoveToWindow() {
         super.viewDidMoveToWindow()
+        guard let _ = window else {
+            popupWindow = nil
+            return
+        }
         
         disableHover()
         enableHover()
         
         // set up popup window
-        popupWindow.level = .popUpMenu
-        popupWindow.styleMask.remove([.closable, .miniaturizable, .resizable])
-        popupWindow.backgroundColor = .clear
-        popupWindow.isReleasedWhenClosed = false
+        tooltipView = TooltipView()
+        popupWindow = NSWindow(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
+        popupWindow?.level = .popUpMenu
+        popupWindow?.styleMask.remove([.closable, .miniaturizable, .resizable])
+        popupWindow?.backgroundColor = .clear
+        popupWindow?.isReleasedWhenClosed = false
         
-        tooltipView.translatesAutoresizingMaskIntoConstraints = false
-        popupWindow.contentView?.addSubview(tooltipView)
+        tooltipView?.translatesAutoresizingMaskIntoConstraints = false
+        popupWindow?.contentView?.addSubview(tooltipView!)
         
-        noteToken = NSWorkspace.shared.notificationCenter.addObserver(forName: NSWorkspace
+        NSWorkspace.shared.notificationCenter.addObserver(forName: NSWorkspace
             .didDeactivateApplicationNotification, object: nil, queue: nil)
         { (note) in
-            if let info = note.userInfo,
-                let app = info[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
+            if let app = note.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
                 app.localizedName == NSApplication.shared.appName
             {
-                self.popupWindow.close()
+                self.popupWindow?.close()
             }
-        }
+        }.addDisposableToken(to: noteTokenBag)
     }
 
     open override func layout() {
         super.layout()
         
-        guard let sv = superview,
+        guard let pw = popupWindow, pw.isVisible,
+            let tv = tooltipView,
+            let sv = superview,
             let svWindow = sv.window else { return }
         
         var f = frame
-        let s = tooltipView.intrinsicContentSize
-        f.origin.x += (bounds.width - s.width) / 2.0
-        f.origin.y += s.height
+        let s = tv.intrinsicContentSize
+        f.origin.x += (bounds.width - s.width) / 2.0 + popUpOffset.x
+        f.origin.y += s.height + popUpOffset.y
         f.size = s // window size match tooltipView
         
         var windowFrame = sv.convert(f, to: nil) // to window's contentView coordinates
         windowFrame = svWindow.convertToScreen(windowFrame) // to window's screen coordinates
-        popupWindow.setFrame(windowFrame, display: true)
+        popupWindow?.setFrame(windowFrame, display: true)
     }
     
     // MARK: events
@@ -75,29 +87,30 @@ open class NXTooltipButton: NXButton {
     
     open override func mouseExited(with event: NSEvent) {
         super.mouseExited(with: event)
-        popupWindow.close()
+        popupWindow?.close()
     }
     
     open override func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
         
         buttonPressed()
-        tooltipView.invalidateIntrinsicContentSize()
+        tooltipView?.invalidateIntrinsicContentSize()
         needsLayout = true
     }
 }
 
 extension NXTooltipButton {
     private func resetPopup() {
-        tooltipView.label.stringValue = texts.normal
+        guard let pw = popupWindow, !pw.isVisible else { return }
         
-        tooltipView.invalidateIntrinsicContentSize()
+        tooltipView?.label.stringValue = texts.normal
+        tooltipView?.invalidateIntrinsicContentSize()
         needsLayout = true
-        popupWindow.makeKeyAndOrderFront(nil)
+        popupWindow?.makeKeyAndOrderFront(nil)
     }
     
     // MARK: instance methods
     func buttonPressed() {
-        tooltipView.label.stringValue = texts.pressed
+        tooltipView?.label.stringValue = texts.pressed
     }
 }
