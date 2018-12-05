@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="orD-bV-k5V">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="orD-bV-k5V">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1aa-dL-vdy" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1aa-dL-vdy" customClass="NXView" customModule="NXKit">
                                 <rect key="frame" x="20" y="190" width="160" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="1GN-qq-p0L"/>
@@ -37,7 +37,7 @@
                                     <action selector="button1Clicked:" target="orD-bV-k5V" id="P90-73-wy0"/>
                                 </connections>
                             </button>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-1V-lJx" userLabel="View2" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-1V-lJx" userLabel="View2" customClass="NXView" customModule="NXKit">
                                 <rect key="frame" x="20" y="85" width="70" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="q7A-q9-NBg"/>

@@ -31,11 +31,11 @@
         <scene sceneID="MRt-Lj-AlK">
             <objects>
                 <viewController id="nDB-tg-Jzp" customClass="SimpleViewsViewController" customModule="NXKit_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="caC-td-0Sx">
+                    <view key="view" wantsLayer="YES" id="caC-td-0Sx" customClass="NXView" customModule="NXKit">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Re3-dn-hDl" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Re3-dn-hDl" customClass="NXView" customModule="NXKit">
                                 <rect key="frame" x="31" y="184" width="163" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -121,6 +121,7 @@
                         <outlet property="button" destination="Sc2-GF-fB2" id="vHy-Zh-DeL"/>
                         <outlet property="disabledTextfield" destination="CE9-qt-ClI" id="bra-oE-DqJ"/>
                         <outlet property="menu1" destination="YaX-j9-NFB" id="iwU-kR-sbG"/>
+                        <outlet property="simpleView" destination="Re3-dn-hDl" id="wnK-yH-sjJ"/>
                     </connections>
                 </viewController>
                 <customObject id="iCD-WJ-e4I" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

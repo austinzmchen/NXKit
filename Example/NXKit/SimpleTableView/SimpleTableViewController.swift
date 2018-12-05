@@ -7,10 +7,36 @@
 //
 
 import AppKit
+import NXKit
 
 class SimpleTableViewController: NSViewController {
     
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var tableView: NXTableView!
+    
+    private var eventMonitor: EventMonitor?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // detect key down method 1
+        tableView.accepts1stResponder = true
+        tableView.addTarget(self, action: { (event, info) in
+            guard let key = info as? KeyCode.RawType else {return}
+            if key == KeyCode.s {
+                print(key)
+            }
+            print(key)
+        }, for: .keyUp)
+        
+        // detect key down method 2
+        eventMonitor = EventMonitor.init(mask: .keyUp) { (event) -> NSEvent? in
+            if event.keyCode == KeyCode.delete {
+                print("delete")
+            }
+            return event
+        }
+        eventMonitor?.start()
+    }
 }
 
 extension SimpleTableViewController: NSTableViewDataSource, NSTableViewDelegate {
@@ -25,7 +51,7 @@ extension SimpleTableViewController: NSTableViewDataSource, NSTableViewDelegate 
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        if let cell = tableView.makeView(withIdentifier: .init(rawValue: "kSimpleTableCell"), owner: nil) as? NSTableCellView {
+        if var cell = tableView.makeView(withIdentifier: .init(rawValue: "kSimpleTableCell"), owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = "Dummy Cell"
             return cell
         }
@@ -49,6 +75,5 @@ extension SimpleTableViewController: NSTableViewDataSource, NSTableViewDelegate 
         print("tableViewSelectionIsChanging")
     }
     
-    @objc func tableViewDoubleClicked(_ sender: Any) {
-    }
+    @objc func tableViewDoubleClicked(_ sender: Any) {}
 }

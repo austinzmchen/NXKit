@@ -14,10 +14,10 @@
 		C43D40E421499B380076CE8C /* EmbedVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43D40E321499B380076CE8C /* EmbedVC.storyboard */; };
 		C43D40E721499D3F0076CE8C /* EmbedVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D40E621499D3F0076CE8C /* EmbedVCViewController.swift */; };
 		C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FEC422111EB0C00217063 /* SimpleViewsViewController.swift */; };
+		C44DDCA821875E9C0089286D /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DDCA721875E9C0089286D /* EventMonitor.swift */; };
 		C45EF9D1211129A300810941 /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45EF9D0211129A300810941 /* TextView.storyboard */; };
 		C45EF9D62111512D00810941 /* SimpleViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45EF9D52111512D00810941 /* SimpleViews.storyboard */; };
 		C45EF9D82111528900810941 /* NSView_.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9D72111528900810941 /* NSView_.swift */; };
-		C45EF9DB211158C600810941 /* NXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EF9DA211158C600810941 /* NXView.swift */; };
 		C495668C2111F3BB00EF10EE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495668B2111F3BB00EF10EE /* TextViewController.swift */; };
 		C49566902111FB2400EF10EE /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C495668F2111FB2400EF10EE /* StackView.storyboard */; };
 		C49566922111FB3200EF10EE /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49566912111FB3200EF10EE /* StackViewController.swift */; };
@@ -66,10 +66,10 @@
 		C43D40E321499B380076CE8C /* EmbedVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmbedVC.storyboard; sourceTree = "<group>"; };
 		C43D40E621499D3F0076CE8C /* EmbedVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedVCViewController.swift; sourceTree = "<group>"; };
 		C43FEC422111EB0C00217063 /* SimpleViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewsViewController.swift; sourceTree = "<group>"; };
+		C44DDCA721875E9C0089286D /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		C45EF9D0211129A300810941 /* TextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextView.storyboard; sourceTree = "<group>"; };
 		C45EF9D52111512D00810941 /* SimpleViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleViews.storyboard; sourceTree = "<group>"; };
 		C45EF9D72111528900810941 /* NSView_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView_.swift; sourceTree = "<group>"; };
-		C45EF9DA211158C600810941 /* NXView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXView.swift; sourceTree = "<group>"; };
 		C495668B2111F3BB00EF10EE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		C495668F2111FB2400EF10EE /* StackView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		C49566912111FB3200EF10EE /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
@@ -182,10 +182,10 @@
 				C45EF9D52111512D00810941 /* SimpleViews.storyboard */,
 				C43FEC422111EB0C00217063 /* SimpleViewsViewController.swift */,
 				C45EF9D72111528900810941 /* NSView_.swift */,
-				C45EF9DA211158C600810941 /* NXView.swift */,
 				C4120781212C7366006D350E /* TooltipView.swift */,
 				C4120783212C7383006D350E /* TooltipView.xib */,
 				C4CF45A8212E1E5C0099275F /* NXTooltipButton.swift */,
+				C44DDCA721875E9C0089286D /* EventMonitor.swift */,
 			);
 			path = SimpleViews;
 			sourceTree = "<group>";
@@ -475,7 +475,6 @@
 			files = (
 				C4DBA69121449575008CCE5C /* ModalViewController.swift in Sources */,
 				C43FEC432111EB0C00217063 /* SimpleViewsViewController.swift in Sources */,
-				C45EF9DB211158C600810941 /* NXView.swift in Sources */,
 				C4EE3D9321557F9400A5DCD1 /* SampleViewController0.swift in Sources */,
 				C4DBA69021449575008CCE5C /* SimplePresentViewController.swift in Sources */,
 				C4120782212C7366006D350E /* TooltipView.swift in Sources */,
@@ -485,6 +484,7 @@
 				C4ADDDEC213604A200714179 /* SimpleAnimationsViewController.swift in Sources */,
 				C4A4061521504A2D0016963D /* SampleViewController1.swift in Sources */,
 				C4A405E5215027D50016963D /* MainWindowController.swift in Sources */,
+				C44DDCA821875E9C0089286D /* EventMonitor.swift in Sources */,
 				C45EF9D82111528900810941 /* NSView_.swift in Sources */,
 				C4EE3D95215583E400A5DCD1 /* CustomAnimator.swift in Sources */,
 				C49566922111FB3200EF10EE /* StackViewController.swift in Sources */,

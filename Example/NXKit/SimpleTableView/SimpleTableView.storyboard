@@ -21,7 +21,7 @@
                                     <rect key="frame" x="1" y="1" width="233" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" viewBased="YES" id="xQT-aJ-0aW">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" viewBased="YES" id="xQT-aJ-0aW" customClass="NXTableView" customModule="NXKit">
                                             <rect key="frame" x="0.0" y="0.0" width="233" height="298"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -57,7 +57,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
-                                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="cbv-8P-aMj" customClass="NXView" customModule="NXKit_Example" customModuleProvider="target">
+                                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="cbv-8P-aMj" customClass="NXView" customModule="NXKit">
                                                                     <rect key="frame" x="0.0" y="0.0" width="230" height="1"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="C85-Tt-A0h"/>

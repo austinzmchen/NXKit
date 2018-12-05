@@ -14,7 +14,7 @@ extension NSView {
     @IBInspectable var backgroundColor: NSColor? {
         set {
             if let newValue = newValue {
-                layer?.backgroundColor = newValue.cgColor
+            layer?.backgroundColor = newValue.cgColor
                 //        drawsBackground = true
             } else {
                 //        drawsBackground = false

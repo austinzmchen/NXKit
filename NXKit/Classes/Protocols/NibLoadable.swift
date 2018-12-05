@@ -5,31 +5,6 @@
 //  Created by Austin Chen on 2018-08-21.
 //
 
-#if canImport(UIKit)
-
-import UIKit
-import ACKit
-
-public protocol NibLoadable {
-    var contentView: UIView! {get} // contentView is often the IBOutlet with '!'
-    func loadNib(name: String)
-}
-
-public extension NibLoadable where Self: UIView {
-    public func loadNib(name: String, bundle: Bundle? = nil) {
-        let bundle = bundle != nil ? bundle : Bundle(for: type(of: self))
-        let nib = UINib(nibName: name, bundle: bundle)
-        let contentView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        self.addSubview(contentView)
-        
-        // add the missing contrainst between xib contentView to self
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.snapAll(toView: self)
-    }
-}
-
-#elseif canImport(AppKit)
-
 import AppKit
 import NXKit
 
@@ -64,5 +39,3 @@ public extension NibLoadable where Self: NSView {
         contentView.snapAll(toView: self)
     }
 }
-
-#endif

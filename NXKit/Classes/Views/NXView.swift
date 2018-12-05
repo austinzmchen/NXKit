@@ -15,6 +15,7 @@ open class NXView: NSView, Hoverable, BorderStylable, BackgroundStylable, Target
     @IBInspectable public var borderColor: NSColor?
     // background
     @IBInspectable public var backgroundColor: NSColor?
+    @IBInspectable public var accepts1stResponder: Bool = false
     
     @IBInspectable public var userInteractionEnabled: Bool = true {
         didSet { disableInteraction(userInteractionEnabled) }
@@ -39,5 +40,19 @@ open class NXView: NSView, Hoverable, BorderStylable, BackgroundStylable, Target
         
         updateBorderStyle()
         updateBackgroundStyle()
+    }
+    
+    open override func keyDown(with event: NSEvent) {
+        super.keyDown(with: event)
+        notifyTargets(.keyDown, event.keyCode)
+    }
+    
+    open override func keyUp(with event: NSEvent) {
+        super.keyUp(with: event)
+        notifyTargets(.keyUp, event.keyCode)
+    }
+    
+    open override var acceptsFirstResponder: Bool {
+        return accepts1stResponder
     }
 }
