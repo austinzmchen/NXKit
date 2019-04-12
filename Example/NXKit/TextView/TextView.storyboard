@@ -65,7 +65,7 @@
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="hG4-AS-QJv">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hG4-AS-QJv">
                                     <rect key="frame" x="233" y="1" width="16" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
