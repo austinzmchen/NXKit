@@ -824,6 +824,7 @@
                         <segue destination="zXh-PN-J98" kind="show" identifier="showSimpleNavigationVC" id="Nwk-UN-vI0"/>
                         <segue destination="GNC-60-B4U" kind="show" identifier="showSimpleTableVC" id="j8D-u6-mSg"/>
                         <segue destination="Nh1-Wj-ZNG" kind="show" identifier="showSimpleViewsVC" id="rhL-jl-xJb"/>
+                        <segue destination="4NK-ia-Y5e" kind="show" identifier="showSimpleCollectionVC" id="qcW-69-LA3"/>
                     </connections>
                 </viewController>
             </objects>
@@ -884,6 +885,14 @@
                 <customObject id="CVS-7q-E5j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="153" y="1022"/>
+        </scene>
+        <!--SimpleCollectionView-->
+        <scene sceneID="xAG-Lz-Mdx">
+            <objects>
+                <controllerPlaceholder storyboardName="SimpleCollectionView" id="4NK-ia-Y5e" sceneMemberID="viewController"/>
+                <customObject id="oTW-x3-9tA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="1116"/>
         </scene>
         <!--SimpleNavigationController-->
         <scene sceneID="d1D-RI-yzH">
