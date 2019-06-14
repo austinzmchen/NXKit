@@ -65,6 +65,10 @@ extension SimpleCollectionViewController:
         view.imageCount.stringValue = "\(numberOfItemsInSection) image files"
         return view
     }
+    
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        print("abc")
+    }
 }
 
 extension SimpleCollectionViewController : NSCollectionViewDelegateFlowLayout {

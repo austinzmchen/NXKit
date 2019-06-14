@@ -18,7 +18,7 @@ open class NXView: NSView, Hoverable, BorderStylable, BackgroundStylable, Target
     @IBInspectable public var accepts1stResponder: Bool = false
     
     @IBInspectable public var userInteractionEnabled: Bool = true {
-        didSet { disableInteraction(userInteractionEnabled) }
+        didSet { disableInteraction(!userInteractionEnabled) }
     }
     
     open var userInfo: Any?

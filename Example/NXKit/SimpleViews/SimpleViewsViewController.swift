@@ -20,13 +20,16 @@ class SimpleViewsViewController: NSViewController {
     @IBOutlet var menu1: NSMenu!
     @IBOutlet weak var disabledTextfield: NSTextField!
     
+    @IBAction func tooltipButtonClicked(_ sender: Any) {
+        print("tooltip button clicked")
+    }
+    
     private var eventMonitor: EventMonitor?
     private var eventTokenBag = ACEventMonitorTokenBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         disabledTextfield.font = NSFont.systemFont(ofSize: 20)
-        disabledTextfield.disableInteraction(true)
         
         // detect mouse click on other application, so to close the popover
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { event in

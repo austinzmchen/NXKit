@@ -27,6 +27,10 @@ open class NXButton: NSButton, Hoverable, BorderStylable, BackgroundStylable, Ta
         }
     }
     
+    @IBInspectable public var userInteractionEnabled: Bool = true {
+        didSet { disableInteraction(!userInteractionEnabled) }
+    }
+    
     // background
     @IBInspectable public var backgroundColor: NSColor? = NSColor.clear
     
